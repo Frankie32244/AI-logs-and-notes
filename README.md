@@ -1,7 +1,7 @@
 ## 1. 2021-CVPR-Completer(Running logs)
-ref:https://github.com/XLearning-SCU/2021-CVPR-Completer
-time:2023-11-1
-status:Running successfully!
+ref:https://github.com/XLearning-SCU/2021-CVPR-Completer\n
+time:2023-11-1\n
+status:Running successfully!\n
 
 logs following like this :
 ```linux
