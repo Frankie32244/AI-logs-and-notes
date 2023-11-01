@@ -1,3 +1,9 @@
+## 1. 2021-CVPR-Completer(Running logs)
+ref:https://github.com/XLearning-SCU/2021-CVPR-Completer
+time:2023-11-1
+status:Running successfully!
+
+logs following like this :
 ```linux
 root@autodl-container-e6d91195fa-0bc38630:~/2021-CVPR-Completer# python run.py --dataset 0 --devices 0 --print_num 100 --test_time 5
 2023-11-01 17:06:09 - root - INFO: - Dataset:Caltech101-20
