@@ -801,6 +801,12 @@ Parameter Group 0
 2023-11-02 14:55:50 - root - INFO: - NMI:[0.4067, 0.4248, 0.4321, 0.3931, 0.415]
 2023-11-02 14:55:50 - root - INFO: - ARI:[0.215, 0.2419, 0.2378, 0.1893, 0.2313]
 2023-11-02 14:55:50 - root - INFO: -  ACC 38.48 std 1.63 NMI 41.43 std 1.37 ARI 22.31 std 1.92
+root@autodl-container-b72911863c-065c7124:~/2021-CVPR-Completer#
+```
+
+
+### dataset:LandUse_21
+```linux
 root@autodl-container-b72911863c-065c7124:~/2021-CVPR-Completer# python run.py --dataset 2 --devices 0 --print_num 100 --test_time 5
 2023-11-02 14:56:29 - root - INFO: - Dataset:LandUse_21
 2023-11-02 14:56:29 - root - INFO: - Prediction={
@@ -1185,5 +1191,4 @@ Parameter Group 0
 2023-11-02 15:03:18 - root - INFO: - ARI:[0.135, 0.1364, 0.1264, 0.1291, 0.1372]
 2023-11-02 15:03:18 - root - INFO: -  ACC 25.36 std 0.95 NMI 32.36 std 0.60 ARI 13.28 std 0.43
 root@autodl-container-b72911863c-065c7124:~/2021-CVPR-Completer#
-
 ```
