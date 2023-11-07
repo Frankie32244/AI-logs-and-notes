@@ -7,3 +7,11 @@
 * [paper-《Attention Is All You Need》from google brain](https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf)
 * [ Attention is All You Need浅读（简介+代码) ](https://kexue.fm/archives/4765)
 * [知乎回答-如何更通俗地理解transformer](https://www.zhihu.com/question/445556653/answer/3254012065)
+
+## 2.LLM
+
+## 3.循环神经网络（RNN）和卷积神经网络（CNN)
+
+## 4.多模态
+
+## 5.多组学
