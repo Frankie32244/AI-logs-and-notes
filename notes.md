@@ -1,7 +1,7 @@
 ## 1.transformer 
 
 * 如何通俗地理解transformer?
-![098](https://github.com/Frankie32244/MVC-model-running-logs/blob/main/Pics/098.PNG)
+![098](https://github.com/Frankie32244/AI-logs-and-notes/blob/main/Pics/098.PNG))
 
 * [illustrated-transformer-（一篇如何更好地理解transformer的blog）](https://jalammar.github.io/illustrated-transformer/)
 * [paper-《Attention Is All You Need》from google brain](https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf)
@@ -59,7 +59,7 @@
   - 参数学习： 类似于编码器，解码器中的参数也通过反向传播和优化器进行学习，以最小化重建数据与原始数据之间的差异。
 
 总体而言，编码器和解码器在深度学习中的实现通常涉及多个神经网络层、非线性激活函数和参数学习，**其目标是学习输入数据的紧凑表示，并能够有效地从该表示生成原始数据**。
-![001](https://github.com/Frankie32244/MVC-model-running-logs/blob/main/Pics/001.PNG)
+![001](https://github.com/Frankie32244/AI-logs-and-notes/blob/main/Pics/001.PNG))
 ## 8.单细胞
 
 ## 9.推荐系统 
