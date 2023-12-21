@@ -1,7 +1,7 @@
 ## 1.transformer 
 
 * 如何通俗地理解transformer?
-![098](https://github.com/Frankie32244/AI-logs-and-notes/blob/main/Pics/098.PNG))
+![098](https://github.com/Frankie32244/AI-logs-and-notes/blob/main/Pics/098.PNG)
 
 * [illustrated-transformer-（一篇如何更好地理解transformer的blog）](https://jalammar.github.io/illustrated-transformer/)
 * [paper-《Attention Is All You Need》from google brain](https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf)
@@ -114,3 +114,27 @@ GCN，即图卷积网络，是一种用于处理图结构数据的深度学习�
 
 举个例子，假设我们有一个人的数据集，其中包括两个视图：一个视图包含身高和体重信息，另一个视图包含年龄和性别信息。每个人的身高、体重、年龄和性别组成了一个实例，分别属于两个不同的视图。
 
+## 14.表征学习
+表征学习:
+
+当我们面对大量的数据时，这些数据可能包含许多复杂的模式和信息。表征学习的目标是让计算机自动地学习如何**最好地表示这些数据**，找到其中的关键特征和结构。这种表示使得计算机能够更好地理解数据，更有效地完成各种任务，而无需人为地指定特定的规则或特征。
+
+## 15.k-means 聚类算法
+
+[Youtube k-means visualization](https://www.youtube.com/watch?v=R2e3Ls9H_fc)
+
+[k-means algorithm visualization](https://www.naftaliharris.com/blog/visualizing-k-means-clustering/)
+```linux
+K-Means 聚类算法的大致思想就是“物以类聚，人以群分”：
+
+1、首先输入 k 的值，即我们指定希望通过聚类得到 k 个分组；
+
+2、从数据集中随机选取 k 个数据点作为初始大佬（质心）；
+
+3、对集合中每一个小弟，计算与每一个大佬的距离，离哪个大佬距离近，就跟定哪个大佬；这时每一个大佬手下都聚集了一票小弟，这时候召开选举大会，每一群选出新的大佬（即通过算法选出新的质心）；
+
+4、如果新大佬和老大佬之间的距离小于某一个设置的阈值（表示重新计算的质心的位置变化不大，趋于稳定，或者说收敛），可以认为我们进行的聚类已经达到期望的结果，算法终止；
+
+5、如果新大佬和老大佬距离变化很大，需要迭代3~5步骤。
+```
+(参考知乎专栏 https://zhuanlan.zhihu.com/p/357072839)
