@@ -10,7 +10,7 @@
 
 ## 2.LLMs
 * 《高级软件工程》Ppt LLms-lee ppt
-> --本机路径(F:\academic-reports\2023-11-13高级软件工程汇报ppt)。
+> --本机路径(F:\AAA-reports\2023-11-13高级软件工程汇报ppt)。
 
 加上组会成员的一篇ppt，更加了解了大语言模型。
 ## 3.循环神经网络（RNN）和卷积神经网络（CNN)
