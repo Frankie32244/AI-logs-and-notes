@@ -1,3 +1,4 @@
+```linux
 root@autodl-container-588a499a63-54f942b1:~# ls
 autodl-pub  autodl-tmp  miniconda3  tf-logs
 root@autodl-container-588a499a63-54f942b1:~# git clone https://github.com/XLearning-SCU/2021-AAAI-CC
@@ -162,4 +163,5 @@ Step [80/120]    Computing features...
 Step [100/120]   Computing features...
 Features shape (60000,)
 NMI = 0.0000 ARI = 0.0000 F = 0.3162 ACC = 0.1000
-root@autodl-container-588a499a63-54f942b1:~/2021-AAAI-CC# 
+root@autodl-container-588a499a63-54f942b1:~/2021-AAAI-CC#
+```
