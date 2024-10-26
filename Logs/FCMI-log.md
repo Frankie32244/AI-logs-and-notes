@@ -1,3 +1,4 @@
+3080Ti 跑该代码需要更换配置 ??? 
 ```linux
 root@autodl-container-7c5d4696fb-c54fea2a:~/RMCNC/2024-TKDE-RMCNC-main/RMCNC_main# git clone https://github.com/XLearning-SCU/2023-CVPR-FCMI
 Cloning into '2023-CVPR-FCMI'...
