@@ -1,3 +1,4 @@
+只可以跑Scene 和 Caltech101 两个数据集 ??
 ```linux
 root@autodl-container-7c5d4696fb-c54fea2a:~# git clone https://github.com/XLearning-SCU/2024-AAAI-DIVIDE
 Cloning into '2024-AAAI-DIVIDE'...
