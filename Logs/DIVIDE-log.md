@@ -327,3 +327,308 @@ Average K-means Result: ACC = 46.96(2.61) NMI = 47.48(1.42) ARI = 29.80(1.79)
 root@autodl-container-7c5d4696fb-c54fea2a:~/DIVIDE# 
 
 ```
+
+
+
+2024-10-30 跑的一个结果
+
+```linux
+root@autodl-container-04e2498428-551163cf:~/2024-AAAI-DIVIDE# tar -czvf folder.tar.gz ./
+./
+./.git/
+./.git/branches/
+./.git/hooks/
+./.git/hooks/applypatch-msg.sample
+./.git/hooks/commit-msg.sample
+./.git/hooks/fsmonitor-watchman.sample
+./.git/hooks/post-update.sample
+./.git/hooks/pre-applypatch.sample
+./.git/hooks/pre-commit.sample
+./.git/hooks/pre-merge-commit.sample
+./.git/hooks/pre-push.sample
+./.git/hooks/pre-rebase.sample
+./.git/hooks/pre-receive.sample
+./.git/hooks/prepare-commit-msg.sample
+./.git/hooks/push-to-checkout.sample
+./.git/hooks/update.sample
+./.git/info/
+./.git/info/exclude
+./.git/logs/
+./.git/logs/refs/
+./.git/logs/refs/heads/
+./.git/logs/refs/heads/main
+./.git/logs/refs/remotes/
+./.git/logs/refs/remotes/origin/
+./.git/logs/refs/remotes/origin/HEAD
+./.git/logs/HEAD
+./.git/objects/
+./.git/objects/info/
+./.git/objects/pack/
+./.git/objects/pack/pack-e2449f3ec7d096bc0373eb8406af43c329d4c910.idx
+./.git/objects/pack/pack-e2449f3ec7d096bc0373eb8406af43c329d4c910.pack
+./.git/refs/
+./.git/refs/heads/
+./.git/refs/heads/main
+./.git/refs/remotes/
+./.git/refs/remotes/origin/
+./.git/refs/remotes/origin/HEAD
+./.git/refs/tags/
+./.git/HEAD
+./.git/config
+./.git/description
+./.git/index
+./.git/packed-refs
+./.ipynb_checkpoints/
+./.ipynb_checkpoints/main_train-checkpoint.py
+./.ipynb_checkpoints/model-checkpoint.py
+./DIVIDE/
+./DIVIDE/Scene15_msrt_0.0_tau_0.5_bs_1024_blr_0.0005/
+./DIVIDE/Scene15_msrt_0.0_tau_0.5_bs_1024_blr_0.0005/visualize/
+./DIVIDE/Scene15_msrt_0.0_tau_0.5_bs_1024_blr_0.0005/log_train.txt
+./__pycache__/
+./__pycache__/dataset_loader.cpython-312.pyc
+./__pycache__/engine_train.cpython-312.pyc
+./__pycache__/model.cpython-312.pyc
+./__pycache__/utils.cpython-312.pyc
+./config/
+./config/Caltech101.yaml
+./config/Scene15.yaml
+./data/
+./data/.ipynb_checkpoints/
+./data/multiview/
+./data/multiview/Scene_15.mat
+./figure/
+./figure/Overview.png
+./ge/
+./ge/.ipynb_checkpoints/
+./ge/.ipynb_checkpoints/alias-checkpoint.py
+./ge/.ipynb_checkpoints/utils-checkpoint.py
+./ge/__pycache__/
+./ge/__pycache__/__init__.cpython-312.pyc
+./ge/__pycache__/alias.cpython-312.pyc
+./ge/__pycache__/utils.cpython-312.pyc
+./ge/__pycache__/walker.cpython-312.pyc
+./ge/models/
+./ge/models/.ipynb_checkpoints/
+./ge/models/.ipynb_checkpoints/line-checkpoint.py
+./ge/models/__pycache__/
+./ge/models/__pycache__/__init__.cpython-312.pyc
+./ge/models/__pycache__/deepwalk.cpython-312.pyc
+./ge/models/__pycache__/line.cpython-312.pyc
+./ge/models/__pycache__/node2vec.cpython-312.pyc
+./ge/models/__pycache__/sdne.cpython-312.pyc
+./ge/models/__pycache__/struc2vec.cpython-312.pyc
+./ge/models/__init__.py
+./ge/models/deepwalk.py
+./ge/models/line.py
+./ge/models/node2vec.py
+./ge/models/sdne.py
+./ge/models/struc2vec.py
+./ge/__init__.py
+./ge/alias.py
+./ge/classify.py
+./ge/utils.py
+./ge/walker.py
+./README.md
+./dataset_loader.py
+./engine_train.py
+./main_train.py
+./model.py
+./utils.py
+tar: .: file changed as we read it
+root@autodl-container-04e2498428-551163cf:~/2024-AAAI-DIVIDE# python main_train.py --config_file=config/Scene15.yaml
+2024-10-30 15:24:48.302198: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-10-30 15:24:48.318121: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1730273088.340289    1310 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1730273088.345988    1310 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-10-30 15:24:48.365651: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+
+enable cudnn.deterministic, seed fixed: 0
+job dir: /root/2024-AAAI-DIVIDE
+Batch size: 1024
+Start time: 2024-10-30 15:24
+Train parameters: Namespace(config_file='config/Scene15.yaml',
+encoder_dim=[[20,
+1024,
+1024,
+1024,
+128],
+[59,
+1024,
+1024,
+1024,
+128]],
+embed_dim=128,
+temperature=0.5,
+start_rectify_epoch=100,
+momentum=0.98,
+drop_rate=0.2,
+n_views=2,
+n_classes=15,
+batch_size=1024,
+epochs=200,
+warmup_epochs=20,
+data_norm='standard',
+train_time=5,
+weight_decay=0,
+lr=0.002,
+dataset='Scene15',
+missing_rate=0.0,
+data_path='data/multiview',
+device='cuda',
+output_dir='DIVIDE/Scene15_msrt_0.0_tau_0.5_bs_1024_blr_0.0005',
+print_freq=50,
+start_epoch=0,
+num_workers=8,
+seed=0,
+pin_mem=True,
+blr=0.0005,
+train_id=0,
+n_sample=4485)
+DIVIDE(
+  (online_encoder): ModuleList(
+    (0): FCN(
+      (ffn): Sequential(
+        (0): Linear(in_features=20, out_features=1024, bias=False)
+        (1): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU()
+        (3): Dropout(p=0.2, inplace=False)
+        (4): Linear(in_features=1024, out_features=1024, bias=False)
+        (5): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): ReLU()
+        (7): Dropout(p=0.2, inplace=False)
+        (8): Linear(in_features=1024, out_features=1024, bias=False)
+        (9): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (10): ReLU()
+        (11): Linear(in_features=1024, out_features=128, bias=False)
+        (12): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      )
+    )
+    (1): FCN(
+      (ffn): Sequential(
+        (0): Linear(in_features=59, out_features=1024, bias=False)
+        (1): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU()
+        (3): Dropout(p=0.2, inplace=False)
+        (4): Linear(in_features=1024, out_features=1024, bias=False)
+        (5): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): ReLU()
+        (7): Dropout(p=0.2, inplace=False)
+        (8): Linear(in_features=1024, out_features=1024, bias=False)
+        (9): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (10): ReLU()
+        (11): Linear(in_features=1024, out_features=128, bias=False)
+        (12): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      )
+    )
+  )
+  (target_encoder): ModuleList(
+    (0): FCN(
+      (ffn): Sequential(
+        (0): Linear(in_features=20, out_features=1024, bias=False)
+        (1): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU()
+        (3): Dropout(p=0.2, inplace=False)
+        (4): Linear(in_features=1024, out_features=1024, bias=False)
+        (5): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): ReLU()
+        (7): Dropout(p=0.2, inplace=False)
+        (8): Linear(in_features=1024, out_features=1024, bias=False)
+        (9): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (10): ReLU()
+        (11): Linear(in_features=1024, out_features=128, bias=False)
+        (12): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      )
+    )
+    (1): FCN(
+      (ffn): Sequential(
+        (0): Linear(in_features=59, out_features=1024, bias=False)
+        (1): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU()
+        (3): Dropout(p=0.2, inplace=False)
+        (4): Linear(in_features=1024, out_features=1024, bias=False)
+        (5): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): ReLU()
+        (7): Dropout(p=0.2, inplace=False)
+        (8): Linear(in_features=1024, out_features=1024, bias=False)
+        (9): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (10): ReLU()
+        (11): Linear(in_features=1024, out_features=128, bias=False)
+        (12): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      )
+    )
+  )
+  (cross_view_decoder): ModuleList(
+    (0-1): 2 x MLP(
+      (mlp): Sequential(
+        (0): Linear(in_features=128, out_features=512, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=512, out_features=128, bias=True)
+      )
+    )
+  )
+  (cl): ContrastiveLoss()
+)
+Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.99)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.002
+    maximize: False
+    weight_decay: 0
+)
+Data loaded: there are 4485 samples.
+
+>> Start training 0-th initial, seed: 0,
+Epoch: [49]  [0/4]  eta: 0:00:00  lr: 0.002000  loss: 0.0102 (0.0102)  time: 0.2210  data: 0.1936  max mem: 200
+Epoch: [49]  [3/4]  eta: 0:00:00  lr: 0.002000  loss: 0.0102 (0.0102)  time: 0.0689  data: 0.0485  max mem: 200
+Epoch: [49] Total time: 0:00:00 (0.0781 s / it)
+Averaged stats: lr: 0.002000  loss: 0.0102 (0.0102)
+Epoch 49 K-means: NMI = 0.4520 ARI = 0.2785 F = 0.3293 ACC = 0.4433
+Epoch: [99]  [0/4]  eta: 0:00:00  lr: 0.002000  loss: 0.0101 (0.0101)  time: 0.2245  data: 0.1968  max mem: 200
+Epoch: [99]  [3/4]  eta: 0:00:00  lr: 0.002000  loss: 0.0101 (0.0101)  time: 0.0719  data: 0.0493  max mem: 200
+Epoch: [99] Total time: 0:00:00 (0.0824 s / it)
+Averaged stats: lr: 0.002000  loss: 0.0101 (0.0101)
+Epoch 99 K-means: NMI = 0.4507 ARI = 0.2844 F = 0.3340 ACC = 0.4319
+Traceback (most recent call last):
+  File "/root/2024-AAAI-DIVIDE/main_train.py", line 203, in <module>
+    main(args)
+  File "/root/2024-AAAI-DIVIDE/main_train.py", line 161, in main
+    train_state = train_one_time(args, state_logger)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/2024-AAAI-DIVIDE/main_train.py", line 132, in train_one_time
+    train_state = train_one_epoch(
+                  ^^^^^^^^^^^^^^^^
+  File "/root/2024-AAAI-DIVIDE/engine_train.py", line 40, in train_one_epoch
+    loss = model(samples, mmt, epoch < args.start_rectify_epoch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/2024-AAAI-DIVIDE/model.py", line 35, in forward
+    mp = [self.kernel_affinity(z_t[i]) for i in range(self.n_views)]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/2024-AAAI-DIVIDE/model.py", line 55, in kernel_affinity
+    model = LINE(G, embedding_size=1024, order='second')  # 初始化 LINE 模型，选择‘second’阶关系
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/2024-AAAI-DIVIDE/ge/models/line.py", line 75, in __init__
+    self._gen_sampling_table()
+  File "/root/2024-AAAI-DIVIDE/ge/models/line.py", line 110, in _gen_sampling_table
+    norm_prob = [float(math.pow(node_degree[j], power)) / total_sum for j in range(num_nodes)]
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+ZeroDivisionError: float division by zero
+root@autodl-container-04e2498428-551163cf:~/2024-AAAI-DIVIDE# 
+```
