@@ -1,4 +1,4 @@
-```linux
+```bash
 root@autodl-container-588a499a63-54f942b1:~# ls
 autodl-pub  autodl-tmp  miniconda3  tf-logs
 root@autodl-container-588a499a63-54f942b1:~# git clone https://github.com/XLearning-SCU/2021-AAAI-CC
