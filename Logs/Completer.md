@@ -1194,3 +1194,418 @@ Parameter Group 0
 2023-11-02 15:03:18 - root - INFO: -  ACC 25.36 std 0.95 NMI 32.36 std 0.60 ARI 13.28 std 0.43
 root@autodl-container-b72911863c-065c7124:~/2021-CVPR-Completer#
 ```
+
+
+#### Noisy Minist 
+```linux
+root@autodl-container-7c5d4696fb-c54fea2a:~/2021-CVPR-Completer-main# python run.py --dataset 3 --devices 0 --print_num 100 --test_time 5
+2024-11-06 20:24:01 - root - INFO: - Dataset:NoisyMNIST
+2024-11-06 20:24:01 - root - INFO: - Prediction={
+2024-11-06 20:24:01 - root - INFO: -           arch1 = [128, 256, 128]
+2024-11-06 20:24:01 - root - INFO: -           arch2 = [128, 256, 128]
+2024-11-06 20:24:01 - root - INFO: - Autoencoder={
+2024-11-06 20:24:01 - root - INFO: -           arch1 = [784, 1024, 1024, 1024, 64]
+2024-11-06 20:24:01 - root - INFO: -           arch2 = [784, 1024, 1024, 1024, 64]
+2024-11-06 20:24:01 - root - INFO: -           activations1 = relu
+2024-11-06 20:24:01 - root - INFO: -           activations2 = relu
+2024-11-06 20:24:01 - root - INFO: -           batchnorm = True
+2024-11-06 20:24:01 - root - INFO: - training={
+2024-11-06 20:24:01 - root - INFO: -           missing_rate = 0.5
+2024-11-06 20:24:01 - root - INFO: -           seed = 0
+2024-11-06 20:24:01 - root - INFO: -           start_dual_prediction = 100
+2024-11-06 20:24:01 - root - INFO: -           epoch = 500
+2024-11-06 20:24:01 - root - INFO: -           batch_size = 256
+2024-11-06 20:24:01 - root - INFO: -           lr = 0.0001
+2024-11-06 20:24:01 - root - INFO: -           alpha = 9
+2024-11-06 20:24:01 - root - INFO: -           lambda1 = 0.1
+2024-11-06 20:24:01 - root - INFO: -           lambda2 = 0.1
+2024-11-06 20:24:01 - root - INFO: - print_num = 100
+2024-11-06 20:24:01 - root - INFO: - dataset = NoisyMNIST
+type conversion view 1
+type conversion view 2
+type conversion view 1
+type conversion view 2
+type conversion view 1
+type conversion view 2
+2024-11-06 20:24:08 - root - INFO: - Autoencoder(
+  (_encoder): Sequential(
+    (0): Linear(in_features=784, out_features=1024, bias=True)
+    (1): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Linear(in_features=1024, out_features=1024, bias=True)
+    (4): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Linear(in_features=1024, out_features=1024, bias=True)
+    (7): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU()
+    (9): Linear(in_features=1024, out_features=64, bias=True)
+    (10): Softmax(dim=1)
+  )
+  (_decoder): Sequential(
+    (0): Linear(in_features=64, out_features=1024, bias=True)
+    (1): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Linear(in_features=1024, out_features=1024, bias=True)
+    (4): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Linear(in_features=1024, out_features=1024, bias=True)
+    (7): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU()
+    (9): Linear(in_features=1024, out_features=784, bias=True)
+    (10): BatchNorm1d(784, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (11): ReLU()
+  )
+)
+2024-11-06 20:24:08 - root - INFO: - Prediction(
+  (_encoder): Sequential(
+    (0): Linear(in_features=64, out_features=128, bias=True)
+    (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Linear(in_features=128, out_features=256, bias=True)
+    (4): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Linear(in_features=256, out_features=128, bias=True)
+    (7): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU()
+  )
+  (_decoder): Sequential(
+    (0): Linear(in_features=128, out_features=256, bias=True)
+    (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Linear(in_features=256, out_features=128, bias=True)
+    (4): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Linear(in_features=128, out_features=64, bias=True)
+    (7): Softmax(dim=1)
+  )
+)
+2024-11-06 20:24:08 - root - INFO: - Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.0001
+    maximize: False
+    weight_decay: 0
+)
+2024-11-06 20:24:59 - root - INFO: - Epoch : 100/500 ===> Reconstruction loss = 1.7897===> Reconstruction loss = 5.1152 ===> Dual prediction loss = 0.3852  ===> Contrastive loss = -3.0930e+03 ===> Loss = -3.0923e+03
+2024-11-06 20:25:00 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7672, 'NMI': 0.7674, 'ARI': 0.7208, 'accuracy': 0.805, 'precision': 0.776, 'recall': 0.8034, 'f_measure': 0.7797}}
+2024-11-06 20:26:05 - root - INFO: - Epoch : 200/500 ===> Reconstruction loss = 1.6229===> Reconstruction loss = 3.8070 ===> Dual prediction loss = 0.0327  ===> Contrastive loss = -3.0930e+03 ===> Loss = -3.0925e+03
+2024-11-06 20:26:06 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7642, 'NMI': 0.7644, 'ARI': 0.7207, 'accuracy': 0.8027, 'precision': 0.7755, 'recall': 0.801, 'f_measure': 0.7778}}
+2024-11-06 20:27:11 - root - INFO: - Epoch : 300/500 ===> Reconstruction loss = 1.6257===> Reconstruction loss = 3.6241 ===> Dual prediction loss = 0.0376  ===> Contrastive loss = -3.0926e+03 ===> Loss = -3.0920e+03
+2024-11-06 20:27:12 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7621, 'NMI': 0.7623, 'ARI': 0.7178, 'accuracy': 0.8004, 'precision': 0.7729, 'recall': 0.7987, 'f_measure': 0.7755}}
+2024-11-06 20:28:16 - root - INFO: - Epoch : 400/500 ===> Reconstruction loss = 1.5614===> Reconstruction loss = 3.5156 ===> Dual prediction loss = 0.0479  ===> Contrastive loss = -3.0927e+03 ===> Loss = -3.0922e+03
+2024-11-06 20:28:17 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7594, 'NMI': 0.7596, 'ARI': 0.7178, 'accuracy': 0.7993, 'precision': 0.7718, 'recall': 0.7975, 'f_measure': 0.7746}}
+2024-11-06 20:29:21 - root - INFO: - Epoch : 500/500 ===> Reconstruction loss = 1.6039===> Reconstruction loss = 3.5711 ===> Dual prediction loss = 0.0592  ===> Contrastive loss = -3.0940e+03 ===> Loss = -3.0935e+03
+2024-11-06 20:29:23 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7653, 'NMI': 0.7655, 'ARI': 0.7217, 'accuracy': 0.8045, 'precision': 0.7756, 'recall': 0.8029, 'f_measure': 0.7789}}
+2024-11-06 20:29:23 - root - INFO: - Autoencoder(
+  (_encoder): Sequential(
+    (0): Linear(in_features=784, out_features=1024, bias=True)
+    (1): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Linear(in_features=1024, out_features=1024, bias=True)
+    (4): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Linear(in_features=1024, out_features=1024, bias=True)
+    (7): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU()
+    (9): Linear(in_features=1024, out_features=64, bias=True)
+    (10): Softmax(dim=1)
+  )
+  (_decoder): Sequential(
+    (0): Linear(in_features=64, out_features=1024, bias=True)
+    (1): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Linear(in_features=1024, out_features=1024, bias=True)
+    (4): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Linear(in_features=1024, out_features=1024, bias=True)
+    (7): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU()
+    (9): Linear(in_features=1024, out_features=784, bias=True)
+    (10): BatchNorm1d(784, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (11): ReLU()
+  )
+)
+2024-11-06 20:29:23 - root - INFO: - Prediction(
+  (_encoder): Sequential(
+    (0): Linear(in_features=64, out_features=128, bias=True)
+    (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Linear(in_features=128, out_features=256, bias=True)
+    (4): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Linear(in_features=256, out_features=128, bias=True)
+    (7): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU()
+  )
+  (_decoder): Sequential(
+    (0): Linear(in_features=128, out_features=256, bias=True)
+    (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Linear(in_features=256, out_features=128, bias=True)
+    (4): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Linear(in_features=128, out_features=64, bias=True)
+    (7): Softmax(dim=1)
+  )
+)
+2024-11-06 20:29:23 - root - INFO: - Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.0001
+    maximize: False
+    weight_decay: 0
+)
+2024-11-06 20:30:12 - root - INFO: - Epoch : 100/500 ===> Reconstruction loss = 1.6435===> Reconstruction loss = 4.8717 ===> Dual prediction loss = 0.3018  ===> Contrastive loss = -3.0155e+03 ===> Loss = -3.0149e+03
+2024-11-06 20:30:13 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7314, 'NMI': 0.7317, 'ARI': 0.64, 'accuracy': 0.7237, 'precision': 0.6954, 'recall': 0.7186, 'f_measure': 0.6922}}
+2024-11-06 20:31:17 - root - INFO: - Epoch : 200/500 ===> Reconstruction loss = 1.4362===> Reconstruction loss = 3.7795 ===> Dual prediction loss = 0.0139  ===> Contrastive loss = -3.0147e+03 ===> Loss = -3.0142e+03
+2024-11-06 20:31:19 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7393, 'NMI': 0.7395, 'ARI': 0.6434, 'accuracy': 0.7192, 'precision': 0.6642, 'recall': 0.7161, 'f_measure': 0.6688}}
+2024-11-06 20:32:21 - root - INFO: - Epoch : 300/500 ===> Reconstruction loss = 1.3426===> Reconstruction loss = 3.4707 ===> Dual prediction loss = 0.0134  ===> Contrastive loss = -3.0127e+03 ===> Loss = -3.0122e+03
+2024-11-06 20:32:23 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7445, 'NMI': 0.7447, 'ARI': 0.6494, 'accuracy': 0.7224, 'precision': 0.6614, 'recall': 0.7192, 'f_measure': 0.6703}}
+2024-11-06 20:33:26 - root - INFO: - Epoch : 400/500 ===> Reconstruction loss = 1.2405===> Reconstruction loss = 3.3015 ===> Dual prediction loss = 0.0126  ===> Contrastive loss = -3.0146e+03 ===> Loss = -3.0142e+03
+2024-11-06 20:33:28 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7467, 'NMI': 0.7469, 'ARI': 0.642, 'accuracy': 0.7156, 'precision': 0.6535, 'recall': 0.7124, 'f_measure': 0.6656}}
+2024-11-06 20:34:31 - root - INFO: - Epoch : 500/500 ===> Reconstruction loss = 1.2332===> Reconstruction loss = 3.6328 ===> Dual prediction loss = 0.0161  ===> Contrastive loss = -3.0138e+03 ===> Loss = -3.0133e+03
+2024-11-06 20:34:33 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7441, 'NMI': 0.7443, 'ARI': 0.6574, 'accuracy': 0.7358, 'precision': 0.6708, 'recall': 0.7309, 'f_measure': 0.677}}
+2024-11-06 20:34:33 - root - INFO: - Autoencoder(
+  (_encoder): Sequential(
+    (0): Linear(in_features=784, out_features=1024, bias=True)
+    (1): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Linear(in_features=1024, out_features=1024, bias=True)
+    (4): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Linear(in_features=1024, out_features=1024, bias=True)
+    (7): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU()
+    (9): Linear(in_features=1024, out_features=64, bias=True)
+    (10): Softmax(dim=1)
+  )
+  (_decoder): Sequential(
+    (0): Linear(in_features=64, out_features=1024, bias=True)
+    (1): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Linear(in_features=1024, out_features=1024, bias=True)
+    (4): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Linear(in_features=1024, out_features=1024, bias=True)
+    (7): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU()
+    (9): Linear(in_features=1024, out_features=784, bias=True)
+    (10): BatchNorm1d(784, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (11): ReLU()
+  )
+)
+2024-11-06 20:34:33 - root - INFO: - Prediction(
+  (_encoder): Sequential(
+    (0): Linear(in_features=64, out_features=128, bias=True)
+    (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Linear(in_features=128, out_features=256, bias=True)
+    (4): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Linear(in_features=256, out_features=128, bias=True)
+    (7): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU()
+  )
+  (_decoder): Sequential(
+    (0): Linear(in_features=128, out_features=256, bias=True)
+    (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Linear(in_features=256, out_features=128, bias=True)
+    (4): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Linear(in_features=128, out_features=64, bias=True)
+    (7): Softmax(dim=1)
+  )
+)
+2024-11-06 20:34:33 - root - INFO: - Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.0001
+    maximize: False
+    weight_decay: 0
+)
+2024-11-06 20:35:22 - root - INFO: - Epoch : 100/500 ===> Reconstruction loss = 1.4731===> Reconstruction loss = 4.8055 ===> Dual prediction loss = 0.2983  ===> Contrastive loss = -3.0080e+03 ===> Loss = -3.0074e+03
+2024-11-06 20:35:24 - root - INFO: - view_concat {'kmeans': {'AMI': 0.68, 'NMI': 0.6803, 'ARI': 0.5729, 'accuracy': 0.6513, 'precision': 0.6434, 'recall': 0.6489, 'f_measure': 0.6318}}
+2024-11-06 20:36:26 - root - INFO: - Epoch : 200/500 ===> Reconstruction loss = 1.4049===> Reconstruction loss = 4.5374 ===> Dual prediction loss = 0.0372  ===> Contrastive loss = -3.0115e+03 ===> Loss = -3.0109e+03
+2024-11-06 20:36:28 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7019, 'NMI': 0.7021, 'ARI': 0.5537, 'accuracy': 0.6441, 'precision': 0.6425, 'recall': 0.6433, 'f_measure': 0.5936}}
+2024-11-06 20:37:30 - root - INFO: - Epoch : 300/500 ===> Reconstruction loss = 1.4672===> Reconstruction loss = 3.4995 ===> Dual prediction loss = 0.0274  ===> Contrastive loss = -3.0152e+03 ===> Loss = -3.0147e+03
+2024-11-06 20:37:31 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7271, 'NMI': 0.7274, 'ARI': 0.6053, 'accuracy': 0.723, 'precision': 0.7301, 'recall': 0.7231, 'f_measure': 0.7013}}
+2024-11-06 20:38:33 - root - INFO: - Epoch : 400/500 ===> Reconstruction loss = 1.4208===> Reconstruction loss = 3.4143 ===> Dual prediction loss = 0.0347  ===> Contrastive loss = -3.0159e+03 ===> Loss = -3.0154e+03
+2024-11-06 20:38:35 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7278, 'NMI': 0.7281, 'ARI': 0.6045, 'accuracy': 0.724, 'precision': 0.7303, 'recall': 0.7239, 'f_measure': 0.7014}}
+2024-11-06 20:39:38 - root - INFO: - Epoch : 500/500 ===> Reconstruction loss = 1.5612===> Reconstruction loss = 3.4050 ===> Dual prediction loss = 0.0347  ===> Contrastive loss = -3.0219e+03 ===> Loss = -3.0214e+03
+2024-11-06 20:39:39 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7494, 'NMI': 0.7496, 'ARI': 0.7081, 'accuracy': 0.8032, 'precision': 0.8096, 'recall': 0.8028, 'f_measure': 0.798}}
+2024-11-06 20:39:40 - root - INFO: - Autoencoder(
+  (_encoder): Sequential(
+    (0): Linear(in_features=784, out_features=1024, bias=True)
+    (1): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Linear(in_features=1024, out_features=1024, bias=True)
+    (4): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Linear(in_features=1024, out_features=1024, bias=True)
+    (7): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU()
+    (9): Linear(in_features=1024, out_features=64, bias=True)
+    (10): Softmax(dim=1)
+  )
+  (_decoder): Sequential(
+    (0): Linear(in_features=64, out_features=1024, bias=True)
+    (1): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Linear(in_features=1024, out_features=1024, bias=True)
+    (4): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Linear(in_features=1024, out_features=1024, bias=True)
+    (7): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU()
+    (9): Linear(in_features=1024, out_features=784, bias=True)
+    (10): BatchNorm1d(784, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (11): ReLU()
+  )
+)
+2024-11-06 20:39:40 - root - INFO: - Prediction(
+  (_encoder): Sequential(
+    (0): Linear(in_features=64, out_features=128, bias=True)
+    (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Linear(in_features=128, out_features=256, bias=True)
+    (4): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Linear(in_features=256, out_features=128, bias=True)
+    (7): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU()
+  )
+  (_decoder): Sequential(
+    (0): Linear(in_features=128, out_features=256, bias=True)
+    (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Linear(in_features=256, out_features=128, bias=True)
+    (4): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Linear(in_features=128, out_features=64, bias=True)
+    (7): Softmax(dim=1)
+  )
+)
+2024-11-06 20:39:40 - root - INFO: - Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.0001
+    maximize: False
+    weight_decay: 0
+)
+2024-11-06 20:40:28 - root - INFO: - Epoch : 100/500 ===> Reconstruction loss = 1.6217===> Reconstruction loss = 4.8057 ===> Dual prediction loss = 0.3388  ===> Contrastive loss = -3.0105e+03 ===> Loss = -3.0099e+03
+2024-11-06 20:40:30 - root - INFO: - view_concat {'kmeans': {'AMI': 0.6863, 'NMI': 0.6866, 'ARI': 0.5645, 'accuracy': 0.6848, 'precision': 0.7105, 'recall': 0.6825, 'f_measure': 0.683}}
+2024-11-06 20:41:32 - root - INFO: - Epoch : 200/500 ===> Reconstruction loss = 1.4771===> Reconstruction loss = 3.7300 ===> Dual prediction loss = 0.0199  ===> Contrastive loss = -3.0130e+03 ===> Loss = -3.0125e+03
+2024-11-06 20:41:34 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7304, 'NMI': 0.7306, 'ARI': 0.5913, 'accuracy': 0.7044, 'precision': 0.6833, 'recall': 0.7018, 'f_measure': 0.6706}}
+2024-11-06 20:42:38 - root - INFO: - Epoch : 300/500 ===> Reconstruction loss = 1.3920===> Reconstruction loss = 3.3857 ===> Dual prediction loss = 0.0216  ===> Contrastive loss = -3.0109e+03 ===> Loss = -3.0104e+03
+2024-11-06 20:42:40 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7355, 'NMI': 0.7357, 'ARI': 0.5974, 'accuracy': 0.7096, 'precision': 0.6792, 'recall': 0.7072, 'f_measure': 0.6719}}
+2024-11-06 20:43:42 - root - INFO: - Epoch : 400/500 ===> Reconstruction loss = 1.5589===> Reconstruction loss = 3.4238 ===> Dual prediction loss = 0.0360  ===> Contrastive loss = -3.0174e+03 ===> Loss = -3.0169e+03
+2024-11-06 20:43:43 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7648, 'NMI': 0.765, 'ARI': 0.72, 'accuracy': 0.7984, 'precision': 0.7798, 'recall': 0.7967, 'f_measure': 0.7761}}
+2024-11-06 20:44:46 - root - INFO: - Epoch : 500/500 ===> Reconstruction loss = 1.5501===> Reconstruction loss = 3.3872 ===> Dual prediction loss = 0.0511  ===> Contrastive loss = -3.0173e+03 ===> Loss = -3.0168e+03
+2024-11-06 20:44:47 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7388, 'NMI': 0.739, 'ARI': 0.6599, 'accuracy': 0.7683, 'precision': 0.7726, 'recall': 0.7672, 'f_measure': 0.7535}}
+2024-11-06 20:44:47 - root - INFO: - Autoencoder(
+  (_encoder): Sequential(
+    (0): Linear(in_features=784, out_features=1024, bias=True)
+    (1): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Linear(in_features=1024, out_features=1024, bias=True)
+    (4): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Linear(in_features=1024, out_features=1024, bias=True)
+    (7): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU()
+    (9): Linear(in_features=1024, out_features=64, bias=True)
+    (10): Softmax(dim=1)
+  )
+  (_decoder): Sequential(
+    (0): Linear(in_features=64, out_features=1024, bias=True)
+    (1): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Linear(in_features=1024, out_features=1024, bias=True)
+    (4): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Linear(in_features=1024, out_features=1024, bias=True)
+    (7): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU()
+    (9): Linear(in_features=1024, out_features=784, bias=True)
+    (10): BatchNorm1d(784, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (11): ReLU()
+  )
+)
+2024-11-06 20:44:47 - root - INFO: - Prediction(
+  (_encoder): Sequential(
+    (0): Linear(in_features=64, out_features=128, bias=True)
+    (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Linear(in_features=128, out_features=256, bias=True)
+    (4): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Linear(in_features=256, out_features=128, bias=True)
+    (7): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU()
+  )
+  (_decoder): Sequential(
+    (0): Linear(in_features=128, out_features=256, bias=True)
+    (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Linear(in_features=256, out_features=128, bias=True)
+    (4): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Linear(in_features=128, out_features=64, bias=True)
+    (7): Softmax(dim=1)
+  )
+)
+2024-11-06 20:44:47 - root - INFO: - Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.0001
+    maximize: False
+    weight_decay: 0
+)
+2024-11-06 20:45:36 - root - INFO: - Epoch : 100/500 ===> Reconstruction loss = 1.6834===> Reconstruction loss = 4.8829 ===> Dual prediction loss = 0.3461  ===> Contrastive loss = -3.0876e+03 ===> Loss = -3.0869e+03
+2024-11-06 20:45:37 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7316, 'NMI': 0.7318, 'ARI': 0.5895, 'accuracy': 0.6852, 'precision': 0.7053, 'recall': 0.6824, 'f_measure': 0.6691}}
+2024-11-06 20:46:41 - root - INFO: - Epoch : 200/500 ===> Reconstruction loss = 1.4829===> Reconstruction loss = 3.8501 ===> Dual prediction loss = 0.0390  ===> Contrastive loss = -3.0870e+03 ===> Loss = -3.0864e+03
+2024-11-06 20:46:42 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7359, 'NMI': 0.7361, 'ARI': 0.599, 'accuracy': 0.709, 'precision': 0.6928, 'recall': 0.7067, 'f_measure': 0.6799}}
+2024-11-06 20:47:47 - root - INFO: - Epoch : 300/500 ===> Reconstruction loss = 1.4273===> Reconstruction loss = 3.6139 ===> Dual prediction loss = 0.0514  ===> Contrastive loss = -3.0868e+03 ===> Loss = -3.0863e+03
+2024-11-06 20:47:48 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7325, 'NMI': 0.7328, 'ARI': 0.6011, 'accuracy': 0.709, 'precision': 0.6953, 'recall': 0.7068, 'f_measure': 0.6799}}
+2024-11-06 20:48:51 - root - INFO: - Epoch : 400/500 ===> Reconstruction loss = 1.4837===> Reconstruction loss = 3.5934 ===> Dual prediction loss = 0.0702  ===> Contrastive loss = -3.0869e+03 ===> Loss = -3.0864e+03
+2024-11-06 20:48:52 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7264, 'NMI': 0.7267, 'ARI': 0.6125, 'accuracy': 0.7391, 'precision': 0.7584, 'recall': 0.7372, 'f_measure': 0.7175}}
+2024-11-06 20:49:55 - root - INFO: - Epoch : 500/500 ===> Reconstruction loss = 1.5240===> Reconstruction loss = 3.4790 ===> Dual prediction loss = 0.0947  ===> Contrastive loss = -3.0899e+03 ===> Loss = -3.0893e+03
+2024-11-06 20:49:57 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7225, 'NMI': 0.7228, 'ARI': 0.616, 'accuracy': 0.7365, 'precision': 0.7602, 'recall': 0.7347, 'f_measure': 0.7177}}
+2024-11-06 20:49:57 - root - INFO: - --------------------Training over--------------------
+2024-11-06 20:49:57 - root - INFO: - ACC:[0.8045, 0.7358, 0.8032, 0.7683, 0.7365]
+2024-11-06 20:49:57 - root - INFO: - NMI:[0.7655, 0.7443, 0.7496, 0.739, 0.7228]
+2024-11-06 20:49:57 - root - INFO: - ARI:[0.7217, 0.6574, 0.7081, 0.6599, 0.616]
+2024-11-06 20:49:57 - root - INFO: -  ACC 76.97 std 3.03 NMI 74.42 std 1.39 ARI 67.26 std 3.81
+root@autodl-container-7c5d4696fb-c54fea2a:~/2021-CVPR-Completer-main# 
+```
