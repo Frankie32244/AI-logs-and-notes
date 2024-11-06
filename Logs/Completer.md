@@ -7,6 +7,8 @@ status:Running successfully
 
 logs following like this :
 
+跑完的数据集: Caltech101-20、Scene_15、LandUse_21
+
 ### dataset: Caltech101-20
 ```linux
 root@autodl-container-e6d91195fa-0bc38630:~/2021-CVPR-Completer# python run.py --dataset 0 --devices 0 --print_num 100 --test_time 5
