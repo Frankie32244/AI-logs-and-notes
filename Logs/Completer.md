@@ -7,7 +7,7 @@ status:Running successfully
 
 logs following like this :
 
-跑完的数据集: Caltech101-20、Scene_15、LandUse_21
+跑完的数据集: Caltech101-20、Scene_15、LandUse_21，和原论文效果差不多。
 
 ### dataset: Caltech101-20
 ```linux
