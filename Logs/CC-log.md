@@ -1,5 +1,5 @@
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!    这是去年跑的log
+！！！！！！！  这是去年跑的log
 ```linux
 root@autodl-container-588a499a63-54f942b1:~# ls
 autodl-pub  autodl-tmp  miniconda3  tf-logs
@@ -168,7 +168,7 @@ NMI = 0.0000 ARI = 0.0000 F = 0.3162 ACC = 0.1000
 root@autodl-container-588a499a63-54f942b1:~/2021-AAAI-CC#
 ```
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  
+！！！！！！！！！！！ 
 /cofigure/configure.yaml  文件当中start_epoch 需要改到0 再开始训练
 但是我发现训练一轮的时间很长，1个epoch 需要2分钟左右，1000个epoch 就需要2000分钟，需要十几个小时。
 
@@ -264,3 +264,6 @@ Step [100/120]   Computing features...
 Features shape (60000,)
 NMI = 0.1708 ARI = 0.0933 F = 0.1908 ACC = 0.2658
 ```
+
+
+！！！！！！！！！！由于训练这个模型时间较长，先暂时放弃这个模型。
