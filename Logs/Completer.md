@@ -3,7 +3,7 @@
 
 time:2023-11-1、2024-11-15
 
-跑完的数据集: Caltech101-20、Scene_15、LandUse_21，和原论文效果差不多。
+跑完的数据集: Caltech101-20,Scene_15,LandUse_21,Noisy Minist和原论文效果差不多。( complete:missing_rate = 0  incomplete missing_rate = 0.5 ) 
 
 ### dataset: Caltech101-20  missing_rate = 0.5   test_time = 5
 ```linux
@@ -38,7 +38,7 @@ root@autodl-container-e6d91195fa-0bc38630:~/2021-CVPR-Completer# python run.py -
 root@autodl-container-e6d91195fa-0bc38630:~/2021-CVPR-Completer# 
 ```
 
-### dataset: Caltech101-20  missing_rate = 0 test_time = 1
+### dataset: Caltech101-20  missing_rate = 0   test_time = 1
 
 ```linux
 root@autodl-container-534b4e910e-a60bb39b:~/2021-CVPR-Completer# python run.py --dataset 0 --test_time 1
@@ -75,7 +75,7 @@ root@autodl-container-534b4e910e-a60bb39b:~/2021-CVPR-Completer# python run.py -
 
 
 
-### dataset: :Scene_15    missing_rate = 0.5  test_time = 5
+### dataset:Scene_15    missing_rate = 0.5  test_time = 5
 ```linux
 root@autodl-container-b72911863c-065c7124:~/2021-CVPR-Completer# python run.py --dataset 1 --devices 0 --print_num 100 --test_time 5
 2023-11-02 14:48:21 - root - INFO: - Dataset:Scene_15
@@ -141,6 +141,40 @@ root@autodl-container-534b4e910e-a60bb39b:~/2021-CVPR-Completer# python run.py -
 
 ```
 
+
+### dataset:LandUse_21   missing_rate = 0.5  test_time = 1
+```linux
+root@autodl-container-534b4e910e-a60bb39b:~/2021-CVPR-Completer# python run.py --dataset 2 --test_time 1
+2024-11-15 11:14:42 - root - INFO: - Dataset:LandUse_21
+2024-11-15 11:14:42 - root - INFO: - Prediction={
+2024-11-15 11:14:42 - root - INFO: -           arch1 = [128, 256, 128]
+2024-11-15 11:14:42 - root - INFO: -           arch2 = [128, 256, 128]
+2024-11-15 11:14:42 - root - INFO: - Autoencoder={
+2024-11-15 11:14:42 - root - INFO: -           arch1 = [59, 1024, 1024, 1024, 64]
+2024-11-15 11:14:42 - root - INFO: -           arch2 = [40, 1024, 1024, 1024, 64]
+2024-11-15 11:14:42 - root - INFO: -           activations1 = relu
+2024-11-15 11:14:42 - root - INFO: -           activations2 = relu
+2024-11-15 11:14:42 - root - INFO: -           batchnorm = True
+2024-11-15 11:14:42 - root - INFO: - training={
+2024-11-15 11:14:42 - root - INFO: -           missing_rate = 0.5
+2024-11-15 11:14:42 - root - INFO: -           seed = 3
+2024-11-15 11:14:42 - root - INFO: -           start_dual_prediction = 100
+2024-11-15 11:14:42 - root - INFO: -           epoch = 500
+2024-11-15 11:14:42 - root - INFO: -           batch_size = 256
+2024-11-15 11:14:42 - root - INFO: -           lr = 0.0001
+2024-11-15 11:14:42 - root - INFO: -           alpha = 9
+2024-11-15 11:14:42 - root - INFO: -           lambda1 = 0.1
+2024-11-15 11:14:42 - root - INFO: -           lambda2 = 0.1
+2024-11-15 11:14:42 - root - INFO: - print_num = 100
+2024-11-15 11:14:42 - root - INFO: - dataset = LandUse_21
+2024-11-15 11:15:23 - root - INFO: - --------------------Training over--------------------
+2024-11-15 11:15:23 - root - INFO: - ACC:[0.2048]
+2024-11-15 11:15:23 - root - INFO: - NMI:[0.2386]
+2024-11-15 11:15:23 - root - INFO: - ARI:[0.0819]
+2024-11-15 11:15:23 - root - INFO: -  ACC 20.48 std 0.00 NMI 23.86 std 0.00 ARI 8.19 std 0.00
+```
+
+
 ### dataset:LandUse_21   missing_rate = 0  test_time = 5
 ```linux 
 root@autodl-container-b72911863c-065c7124:~/2021-CVPR-Completer# python run.py --dataset 2 --devices 0 --print_num 100 --test_time 5
@@ -173,6 +207,8 @@ root@autodl-container-b72911863c-065c7124:~/2021-CVPR-Completer# python run.py -
 2023-11-02 15:03:18 - root - INFO: -  ACC 25.36 std 0.95 NMI 32.36 std 0.60 ARI 13.28 std 0.43
 root@autodl-container-b72911863c-065c7124:~/2021-CVPR-Completer#
 ```
+
+
 
 
 #### Noisy Minist   missing_rate = 0.5    test_time = 5
@@ -210,7 +246,7 @@ root@autodl-container-7c5d4696fb-c54fea2a:~/2021-CVPR-Completer-main#
 
 
 
-#### Noisy Minist   missing_rate = 0    test_time = 5
+#### Noisy Minist   missing_rate = 0    test_time = 1
 ```linux
 root@autodl-container-534b4e910e-a60bb39b:~/2021-CVPR-Completer# python run.py --dataset 3 --test_time 1
 2024-11-15 10:42:36 - root - INFO: - Dataset:NoisyMNIST
