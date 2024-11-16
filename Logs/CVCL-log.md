@@ -1,6 +1,6 @@
 
-```linux
-root@autodl-container-534b4e910e-a60bb39b:~/CVCL/CVCL# python main.py --db **scene**
+```linux     dataset: scene
+root@autodl-container-534b4e910e-a60bb39b:~/CVCL/CVCL# python main.py --db scene
 ==========
 Args:Namespace(load_model=True, save_model=False, db='scene', seed=10, mse_epochs=200, con_epochs=100, learning_rate=0.0005, weight_decay=0.0, temperature_l=1.0, batch_size=100, normalized=False, gpu='0')
 ==========
@@ -10,6 +10,9 @@ ACC2 = 0.4513 NMI2 = 0.4314 PUR2 = 0.4765 ARI2=0.2673
 ACC3 = 0.4285 NMI3 = 0.3894 PUR3 = 0.4551 ARI3=0.2424
 Clustering results on semantic labels: 4485
 ACC = 0.4459 NMI = 0.4217 PUR = 0.4736 ARI=0.2643
+```
+
+```linux    dataset: MSRCv1
 root@autodl-container-534b4e910e-a60bb39b:~/CVCL/CVCL# python main.py --db MSRCv1
 ==========
 Args:Namespace(load_model=True, save_model=False, db='MSRCv1', seed=10, mse_epochs=200, con_epochs=100, learning_rate=0.0005, weight_decay=0.0, temperature_l=1.0, batch_size=100, normalized=False, gpu='0')
@@ -22,6 +25,9 @@ ACC4 = 0.9571 NMI4 = 0.9119 PUR4 = 0.9571 ARI4=0.9034
 ACC5 = 0.9619 NMI5 = 0.9209 PUR5 = 0.9619 ARI5=0.9122
 Clustering results on semantic labels: 210
 ACC = 0.9762 NMI = 0.9498 PUR = 0.9762 ARI=0.9453
+```
+
+```linux
 root@autodl-container-534b4e910e-a60bb39b:~/CVCL/CVCL# python main.py --db MNIST-USPS
 ==========
 Args:Namespace(load_model=True, save_model=False, db='MNIST-USPS', seed=10, mse_epochs=200, con_epochs=100, learning_rate=0.0005, weight_decay=0.0, temperature_l=1.0, batch_size=100, normalized=False, gpu='0')
@@ -31,6 +37,9 @@ ACC1 = 0.9918 NMI1 = 0.9762 PUR1 = 0.9918 ARI1=0.9819
 ACC2 = 0.9966 NMI2 = 0.9899 PUR2 = 0.9966 ARI2=0.9925
 Clustering results on semantic labels: 5000
 ACC = 0.9970 NMI = 0.9912 PUR = 0.9970 ARI=0.9933
+```
+
+```linux
 root@autodl-container-534b4e910e-a60bb39b:~/CVCL/CVCL# python main.py --db hand
 ==========
 Args:Namespace(load_model=True, save_model=False, db='hand', seed=10, mse_epochs=200, con_epochs=100, learning_rate=0.0005, weight_decay=0.0, temperature_l=1.0, batch_size=100, normalized=False, gpu='0')
@@ -44,6 +53,9 @@ ACC5 = 0.9705 NMI5 = 0.9333 PUR5 = 0.9705 ARI5=0.9360
 ACC6 = 0.7755 NMI6 = 0.7465 PUR6 = 0.7755 ARI6=0.6626
 Clustering results on semantic labels: 2000
 ACC = 0.9735 NMI = 0.9405 PUR = 0.9735 ARI=0.9424
+```
+
+```linux  
 root@autodl-container-534b4e910e-a60bb39b:~/CVCL/CVCL# python main.py --db Fashion
 ==========
 Args:Namespace(load_model=True, save_model=False, db='Fashion', seed=10, mse_epochs=200, con_epochs=100, learning_rate=0.0005, weight_decay=0.0, temperature_l=1.0, batch_size=100, normalized=False, gpu='0')
@@ -54,6 +66,9 @@ ACC2 = 0.9901 NMI2 = 0.9733 PUR2 = 0.9901 ARI2=0.9782
 ACC3 = 0.9895 NMI3 = 0.9714 PUR3 = 0.9895 ARI3=0.9770
 Clustering results on semantic labels: 10000
 ACC = 0.9931 NMI = 0.9821 PUR = 0.9931 ARI=0.9848
+```
+
+```linux
 root@autodl-container-534b4e910e-a60bb39b:~/CVCL/CVCL# python main.py --db BDGP
 ==========
 Args:Namespace(load_model=True, save_model=False, db='BDGP', seed=10, mse_epochs=200, con_epochs=100, learning_rate=0.0005, weight_decay=0.0, temperature_l=1.0, batch_size=100, normalized=False, gpu='0')
@@ -63,6 +78,10 @@ ACC1 = 0.9864 NMI1 = 0.9529 PUR1 = 0.9864 ARI1=0.9664
 ACC2 = 0.9804 NMI2 = 0.9487 PUR2 = 0.9804 ARI2=0.9521
 Clustering results on semantic labels: 2500
 ACC = 0.9920 NMI = 0.9729 PUR = 0.9920 ARI=0.9801
+```
+
+
+```linux
 root@autodl-container-534b4e910e-a60bb39b:~/CVCL/CVCL# python main.py --db COIL20
 ==========
 Args:Namespace(load_model=True, save_model=False, db='COIL20', seed=10, mse_epochs=200, con_epochs=100, learning_rate=0.0005, weight_decay=0.0, temperature_l=1.0, batch_size=100, normalized=False, gpu='0')
