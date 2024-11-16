@@ -1,5 +1,7 @@
+CVCL 跑了多视图聚类数据集之后的一个结果。下载完源码之后要把那些models 和dataset 的文件都要解压一下。
 
-```linux     dataset: scene
+### dataset: scene
+```linux     
 root@autodl-container-534b4e910e-a60bb39b:~/CVCL/CVCL# python main.py --db scene
 ==========
 Args:Namespace(load_model=True, save_model=False, db='scene', seed=10, mse_epochs=200, con_epochs=100, learning_rate=0.0005, weight_decay=0.0, temperature_l=1.0, batch_size=100, normalized=False, gpu='0')
@@ -12,7 +14,9 @@ Clustering results on semantic labels: 4485
 ACC = 0.4459 NMI = 0.4217 PUR = 0.4736 ARI=0.2643
 ```
 
-```linux    dataset: MSRCv1
+
+### dataset: MSRCv1
+```linux    
 root@autodl-container-534b4e910e-a60bb39b:~/CVCL/CVCL# python main.py --db MSRCv1
 ==========
 Args:Namespace(load_model=True, save_model=False, db='MSRCv1', seed=10, mse_epochs=200, con_epochs=100, learning_rate=0.0005, weight_decay=0.0, temperature_l=1.0, batch_size=100, normalized=False, gpu='0')
@@ -27,6 +31,8 @@ Clustering results on semantic labels: 210
 ACC = 0.9762 NMI = 0.9498 PUR = 0.9762 ARI=0.9453
 ```
 
+
+### dataset: MNIST-USPS
 ```linux
 root@autodl-container-534b4e910e-a60bb39b:~/CVCL/CVCL# python main.py --db MNIST-USPS
 ==========
@@ -39,6 +45,8 @@ Clustering results on semantic labels: 5000
 ACC = 0.9970 NMI = 0.9912 PUR = 0.9970 ARI=0.9933
 ```
 
+
+### dataset: hand
 ```linux
 root@autodl-container-534b4e910e-a60bb39b:~/CVCL/CVCL# python main.py --db hand
 ==========
@@ -55,6 +63,7 @@ Clustering results on semantic labels: 2000
 ACC = 0.9735 NMI = 0.9405 PUR = 0.9735 ARI=0.9424
 ```
 
+### dataset: Fashion
 ```linux  
 root@autodl-container-534b4e910e-a60bb39b:~/CVCL/CVCL# python main.py --db Fashion
 ==========
@@ -68,6 +77,7 @@ Clustering results on semantic labels: 10000
 ACC = 0.9931 NMI = 0.9821 PUR = 0.9931 ARI=0.9848
 ```
 
+### dataset: BDGP
 ```linux
 root@autodl-container-534b4e910e-a60bb39b:~/CVCL/CVCL# python main.py --db BDGP
 ==========
@@ -80,7 +90,7 @@ Clustering results on semantic labels: 2500
 ACC = 0.9920 NMI = 0.9729 PUR = 0.9920 ARI=0.9801
 ```
 
-
+### dataset: COIL20
 ```linux
 root@autodl-container-534b4e910e-a60bb39b:~/CVCL/CVCL# python main.py --db COIL20
 ==========
