@@ -1,147 +1,14 @@
-数据集1-3 加载不出来。 
+NoisyMNIST
+Reuters
+Cub
+MNIST-USPS
 
+以上这几个数据集在configure.py 里面没有配置跑不了一点，除非自己来配置。
+
+### dataset : Scene_15  missing_rate = 0.5
 ```linux
-root@autodl-container-7c5d4696fb-c54fea2a:~# history 
-    1  history 
-root@autodl-container-7c5d4696fb-c54fea2a:~# 
-root@autodl-container-7c5d4696fb-c54fea2a:~# 
-root@autodl-container-7c5d4696fb-c54fea2a:~# 
-root@autodl-container-7c5d4696fb-c54fea2a:~# cd ..
-root@autodl-container-7c5d4696fb-c54fea2a:/# ls
-bin  boot  cuda-keyring_1.0-1_all.deb  dev  etc  home  init  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
-root@autodl-container-7c5d4696fb-c54fea2a:/# cd var
-root@autodl-container-7c5d4696fb-c54fea2a:/var# ls
-backups  cache  lib  local  lock  log  mail  opt  run  spool  tmp
-root@autodl-container-7c5d4696fb-c54fea2a:/var# cd log 
-root@autodl-container-7c5d4696fb-c54fea2a:/var/log# ls
-alternatives.log  apt  bootstrap.log  btmp  dpkg.log  faillog  fontconfig.log  journal  lastlog  private  wtmp
-root@autodl-container-7c5d4696fb-c54fea2a:/var/log# cd ../..
-root@autodl-container-7c5d4696fb-c54fea2a:/# ls
-bin  boot  cuda-keyring_1.0-1_all.deb  dev  etc  home  init  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
-root@autodl-container-7c5d4696fb-c54fea2a:/# cd home
-root@autodl-container-7c5d4696fb-c54fea2a:/home# ls
-root@autodl-container-7c5d4696fb-c54fea2a:/home# cd ..
-root@autodl-container-7c5d4696fb-c54fea2a:/# cd ~
-root@autodl-container-7c5d4696fb-c54fea2a:~# ls
-Pro-Imp  Sure  autodl-pub  autodl-tmp  miniconda3  tf-logs
-root@autodl-container-7c5d4696fb-c54fea2a:~# cd Pro
-bash: cd: Pro: No such file or directory
-root@autodl-container-7c5d4696fb-c54fea2a:~# ls
-Pro-Imp  Sure  autodl-pub  autodl-tmp  miniconda3  tf-logs
-root@autodl-container-7c5d4696fb-c54fea2a:~# cd Pro-Imp/
-root@autodl-container-7c5d4696fb-c54fea2a:~/Pro-Imp# ls
-2023-IJCAI-ProImp-main  2023-IJCAI-ProImp-main.zip
-root@autodl-container-7c5d4696fb-c54fea2a:~/Pro-Imp# cd 2023-IJCAI-ProImp-main
-root@autodl-container-7c5d4696fb-c54fea2a:~/Pro-Imp/2023-IJCAI-ProImp-main# ls
-LICENSE  README.md  __pycache__  configure.py  data  datasets.py  evaluation.py  figs  get_mask.py  model.py  run.py  util.py
 root@autodl-container-7c5d4696fb-c54fea2a:~/Pro-Imp/2023-IJCAI-ProImp-main# python run.py --dataset 0 --devices 0 --print_num 50 --test_time 1
 2024-10-26 18:22:53 - root - INFO: - Dataset:Scene_15
-2024-10-26 18:22:53 - root - INFO: - Autoencoder={
-2024-10-26 18:22:53 - root - INFO: -           arch1 = [20, 1024, 1024, 1024, 256]
-2024-10-26 18:22:53 - root - INFO: -           arch2 = [59, 1024, 1024, 1024, 256]
-2024-10-26 18:22:53 - root - INFO: -           activations1 = relu
-2024-10-26 18:22:53 - root - INFO: -           activations2 = relu
-2024-10-26 18:22:53 - root - INFO: -           batchnorm = True
-2024-10-26 18:22:53 - root - INFO: - training={
-2024-10-26 18:22:53 - root - INFO: -           missing_rate = 0.5
-2024-10-26 18:22:53 - root - INFO: -           seed = 0
-2024-10-26 18:22:53 - root - INFO: -           batch_size = 1024
-2024-10-26 18:22:53 - root - INFO: -           epoch = 150
-2024-10-26 18:22:53 - root - INFO: -           lr = 0.001
-2024-10-26 18:22:53 - root - INFO: -           num = 15
-2024-10-26 18:22:53 - root - INFO: -           dim = 256
-2024-10-26 18:22:53 - root - INFO: -           pretrain_epoch = 50
-2024-10-26 18:22:53 - root - INFO: - print_num = 50
-2024-10-26 18:22:53 - root - INFO: - dataset = Scene_15
-2024-10-26 18:22:53 - root - INFO: - Autoencoder(
-  (_encoder): Sequential(
-    (0): Linear(in_features=20, out_features=1024, bias=True)
-    (1): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (2): ReLU()
-    (3): Dropout(p=0.2, inplace=False)
-    (4): Linear(in_features=1024, out_features=1024, bias=True)
-    (5): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (6): ReLU()
-    (7): Dropout(p=0.2, inplace=False)
-    (8): Linear(in_features=1024, out_features=1024, bias=True)
-    (9): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (10): ReLU()
-    (11): Linear(in_features=1024, out_features=256, bias=True)
-  )
-)
-2024-10-26 18:22:53 - root - INFO: - dual_attention(
-  (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
-  (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
-  (soft): Softmax(dim=-1)
-  (ins): InstanceLoss(
-    (criterion): CrossEntropyLoss()
-  )
-  (pro): PrototypeLoss(
-    (criterion): CrossEntropyLoss()
-  )
-  (cross_img): cross_attn(
-    (q_proj): Linear(in_features=256, out_features=256, bias=True)
-    (k_proj): Linear(in_features=256, out_features=256, bias=True)
-    (v_proj1): Linear(in_features=256, out_features=256, bias=True)
-    (v_proj2): Linear(in_features=256, out_features=256, bias=True)
-    (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
-    (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
-    (proj_z): Identity()
-    (proj_c): Identity()
-  )
-  (cross_txt): cross_attn(
-    (q_proj): Linear(in_features=256, out_features=256, bias=True)
-    (k_proj): Linear(in_features=256, out_features=256, bias=True)
-    (v_proj1): Linear(in_features=256, out_features=256, bias=True)
-    (v_proj2): Linear(in_features=256, out_features=256, bias=True)
-    (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
-    (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
-    (proj_z): Identity()
-    (proj_c): Identity()
-  )
-  (proj_c): Identity()
-  (proj_z): Linear(in_features=256, out_features=256, bias=True)
-  (prototype_token_1): Linear(in_features=256, out_features=15, bias=False)
-  (prototype_token_2): Linear(in_features=256, out_features=15, bias=False)
-  (projector_rep): Sequential(
-    (0): Linear(in_features=256, out_features=256, bias=True)
-    (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (2): ReLU(inplace=True)
-    (3): Linear(in_features=256, out_features=256, bias=True)
-  )
-  (projector_prototype): Identity()
-  (projector1): Sequential(
-    (0): Linear(in_features=256, out_features=256, bias=True)
-    (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (2): ReLU(inplace=True)
-    (3): Linear(in_features=256, out_features=256, bias=True)
-    (4): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (5): ReLU()
-    (6): Linear(in_features=256, out_features=256, bias=True)
-  )
-  (projector2): Sequential(
-    (0): Linear(in_features=256, out_features=256, bias=True)
-    (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (2): ReLU(inplace=True)
-    (3): Linear(in_features=256, out_features=256, bias=True)
-    (4): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (5): ReLU()
-    (6): Linear(in_features=256, out_features=256, bias=True)
-  )
-)
-2024-10-26 18:22:53 - root - INFO: - Adam (
-Parameter Group 0
-    amsgrad: False
-    betas: (0.9, 0.999)
-    capturable: False
-    differentiable: False
-    eps: 1e-08
-    foreach: None
-    fused: None
-    lr: 0.001
-    maximize: False
-    weight_decay: 0
-)
 2024-10-26 18:23:08 - root - INFO: - Epoch : 50/150 ===> Learing Rate = 0.0010===> Ins loss = 1.6542e+01 ===> Clu loss = 0.0000e+00 ===> Loss = 1.6542e+01
 -0.016242959
 2024-10-26 18:23:11 - root - INFO: - view_concat {'kmeans': {'AMI': 0.4147, 'NMI': 0.4195, 'ARI': 0.2346, 'accuracy': 0.3795, 'precision': 0.3687, 'recall': 0.3774, 'f_measure': 0.3691}}
@@ -156,4 +23,42 @@ Parameter Group 0
 2024-10-26 18:23:39 - root - INFO: - NMI:[0.4251]
 2024-10-26 18:23:39 - root - INFO: - ARI:[0.2414]
 2024-10-26 18:23:39 - root - INFO: -  ACC 39.69 std 0.00 NMI 42.51 std 0.00 ARI 24.14 std 0.00
+```
+
+### dataset : Scene_15  missing_rate = 0
+```linux
+2024-11-16 15:32:17 - root - INFO: - Epoch : 50/150 ===> Learing Rate = 0.0010===> Ins loss = 2.8840e+01 ===> Clu loss = 0.0000e+00 ===> Loss = 2.8840e+01
+0.0035320676
+2024-11-16 15:32:19 - root - INFO: - view_concat {'kmeans': {'AMI': 0.4433, 'NMI': 0.4479, 'ARI': 0.2729, 'accuracy': 0.4499, 'precision': 0.4359, 'recall': 0.4508, 'f_measure': 0.4359}}
+2024-11-16 15:32:45 - root - INFO: - Epoch : 100/150 ===> Learing Rate = 0.0010===> Ins loss = 2.8466e+01 ===> Clu loss = 1.4931e+01 ===> Loss = 4.3397e+01
+0.012406256
+2024-11-16 15:32:47 - root - INFO: - view_concat {'kmeans': {'AMI': 0.4451, 'NMI': 0.4497, 'ARI': 0.2678, 'accuracy': 0.4308, 'precision': 0.433, 'recall': 0.4344, 'f_measure': 0.4262}}
+2024-11-16 15:33:13 - root - INFO: - Epoch : 150/150 ===> Learing Rate = 0.0010===> Ins loss = 2.8210e+01 ===> Clu loss = 1.4920e+01 ===> Loss = 4.3129e+01
+0.013962765
+2024-11-16 15:33:15 - root - INFO: - view_concat {'kmeans': {'AMI': 0.4502, 'NMI': 0.4547, 'ARI': 0.2741, 'accuracy': 0.4453, 'precision': 0.4426, 'recall': 0.443, 'f_measure': 0.4396}}
+2024-11-16 15:33:15 - root - INFO: - --------------------Training over--------------------
+2024-11-16 15:33:15 - root - INFO: - ACC:[0.4453]
+2024-11-16 15:33:15 - root - INFO: - NMI:[0.4547]
+2024-11-16 15:33:15 - root - INFO: - ARI:[0.2741]
+2024-11-16 15:33:15 - root - INFO: -  ACC 44.53 std 0.00 NMI 45.47 std 0.00 ARI 27.41 std 0.00
+```
+
+
+```linux  Dataset:cub_googlenet  missing_rate = 0
+root@autodl-container-534b4e910e-a60bb39b:~/Pro-Imp/2023-IJCAI-ProImp-main# python run.py --dataset 4 --devices 0 --print_num 50 --test_time 1
+2024-11-16 15:36:44 - root - INFO: - Dataset:cub_googlenet
+2024-11-16 15:36:48 - root - INFO: - Epoch : 50/150 ===> Learing Rate = 0.0010===> Ins loss = 5.6179e+00 ===> Clu loss = 0.0000e+00 ===> Loss = 5.6179e+00
+0.25920653
+2024-11-16 15:36:48 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7336, 'NMI': 0.742, 'ARI': 0.5994, 'accuracy': 0.6883, 'precision': 0.6746, 'recall': 0.6883, 'f_measure': 0.6602}}
+2024-11-16 15:36:51 - root - INFO: - Epoch : 100/150 ===> Learing Rate = 0.0010===> Ins loss = 5.4923e+00 ===> Clu loss = 2.5564e+00 ===> Loss = 8.0487e+00
+0.35264543
+2024-11-16 15:36:51 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7469, 'NMI': 0.7548, 'ARI': 0.6432, 'accuracy': 0.74, 'precision': 0.7111, 'recall': 0.74, 'f_measure': 0.7169}}
+2024-11-16 15:36:54 - root - INFO: - Epoch : 150/150 ===> Learing Rate = 0.0010===> Ins loss = 5.4308e+00 ===> Clu loss = 2.5569e+00 ===> Loss = 7.9877e+00
+0.36583042
+2024-11-16 15:36:54 - root - INFO: - view_concat {'kmeans': {'AMI': 0.7447, 'NMI': 0.7525, 'ARI': 0.6614, 'accuracy': 0.8183, 'precision': 0.8222, 'recall': 0.8183, 'f_measure': 0.816}}
+2024-11-16 15:36:54 - root - INFO: - --------------------Training over--------------------
+2024-11-16 15:36:54 - root - INFO: - ACC:[0.8183]
+2024-11-16 15:36:54 - root - INFO: - NMI:[0.7525]
+2024-11-16 15:36:54 - root - INFO: - ARI:[0.6614]
+2024-11-16 15:36:54 - root - INFO: -  ACC 81.83 std 0.00 NMI 75.25 std 0.00 ARI 66.14 std 0.00
 ```
