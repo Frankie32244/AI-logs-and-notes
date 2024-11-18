@@ -1,7 +1,7 @@
-NoisyMNIST
-Reuters
-Cub
-MNIST-USPS
+* NoisyMNIST
+* Reuters
+* Cub
+* MNIST-USPS
 
 以上这几个数据集在configure.py 里面没有配置跑不了一点，除非自己来配置。
 
