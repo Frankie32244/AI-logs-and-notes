@@ -1,5 +1,5 @@
 数据集报错 ???   FileNotFoundError: [Errno 2] No such file or directory: './datasets/AWA-7view-10158sample.mat'
-
+感觉这论文的代码很乱，但是他的对齐率设置成了0.5 这个东西可以参考一下。
 ```linux
 root@autodl-container-7c5d4696fb-c54fea2a:~# ls
 CVCL  DIVIDE  FCMI  Pro-Imp  RMCNC  SMILE  Sure  autodl-pub  autodl-tmp  miniconda3  tf-logs
