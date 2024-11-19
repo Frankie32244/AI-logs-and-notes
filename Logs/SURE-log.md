@@ -1,3 +1,44 @@
+如果报这种错误的话，改一下run.py 
+
+
+错误代码:
+```linux
+if not os.path.exists('./log/'):
+    os.mkdir("./log/")
+    if not os.path.exists('./log/' + str(data_name[args.data]) + '/'):
+        os.mkdir('./log/' + str(data_name[args.data]) + '/')
+path = os.path.join("./log/" + str(data_name[args.data]) + "/" + 'time=' + time
+                     .strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
+
+```
+
+正确代码:
+```linux
+import os
+import time
+
+# 创建日志文件路径
+if not os.path.exists('./log/'):
+    os.makedirs("./log/")  # 使用 os.makedirs 递归创建目录
+log_dir = './log/' + str(data_name[args.data])
+if not os.path.exists(log_dir):
+    os.makedirs(log_dir)  # 确保日志子目录存在
+
+# 替换时间戳中的非法字符
+timestamp = time.strftime('%Y-%m-%d_%H-%M-%S', time.localtime(time.time()))
+path = os.path.join(log_dir, f'time={timestamp}')
+
+# 设置日志文件
+log_format = '%(message)s'
+logging.basicConfig(stream=sys.stdout, level=logging.INFO, format=log_format, datefmt='%m/%d %I:%M:%S %p')
+fh = logging.FileHandler(path + '.txt')
+fh.setFormatter(logging.Formatter(log_format))
+logging.getLogger().addHandler(fh)
+
+logging.info("******** Training begin ********")
+```
+
+
 ```linux
 root@autodl-container-6c9146b5fb-f8b84f48:~# git clone https://github.com/XLearning-SCU/2022-TPAMI-SURE
 Cloning into '2022-TPAMI-SURE'...
