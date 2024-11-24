@@ -277,3 +277,14 @@ root@autodl-container-534b4e910e-a60bb39b:~/2021-CVPR-Completer# python run.py -
 2024-11-15 10:52:40 - root - INFO: - ARI:[0.8024]
 2024-11-15 10:52:40 - root - INFO: -  ACC 84.33 std 0.00 NMI 86.21 std 0.00 ARI 80.24 std 0.00
 ```
+
+
+###  dataset scene_15 outlookatt 
+```linux
+2024-11-24 11:36:48 - root - INFO: - --------------------Training over--------------------
+2024-11-24 11:36:48 - root - INFO: - ACC:[0.4016, 0.3889, 0.3868, 0.3902, 0.4114]
+2024-11-24 11:36:48 - root - INFO: - NMI:[0.4173, 0.4232, 0.4263, 0.4236, 0.4295]
+2024-11-24 11:36:48 - root - INFO: - ARI:[0.2378, 0.2346, 0.2249, 0.2222, 0.2509]
+2024-11-24 11:36:48 - root - INFO: -  ACC 39.58 std 0.93 NMI 42.40 std 0.40 ARI 23.41 std 1.02
+root@autodl-container-879242bf41-4f27cd59:~/2021-CVPR-Completer#
+```
