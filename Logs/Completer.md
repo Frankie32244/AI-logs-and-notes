@@ -279,7 +279,7 @@ root@autodl-container-534b4e910e-a60bb39b:~/2021-CVPR-Completer# python run.py -
 ```
 
 
-###  dataset scene_15 outlookatt 
+###  dataset scene_15 加了一个outlookattention 模块处理特征数据，和文章的效果差不多。 
 ```linux
 2024-11-24 11:36:48 - root - INFO: - --------------------Training over--------------------
 2024-11-24 11:36:48 - root - INFO: - ACC:[0.4016, 0.3889, 0.3868, 0.3902, 0.4114]
