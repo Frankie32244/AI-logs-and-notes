@@ -311,3 +311,24 @@ root@autodl-container-879242bf41-4f27cd59:~/2021-CVPR-Completer#
 root@autodl-container-0c4b4cae70-1b2227a1:~/2021-CVPR-Completer#
 
 ```
+
+### dataset scene_15 加了一个Knntattention 模块处理特征数据，和文章的效果差很多。 
+```linux  
+2024-11-26 15:20:24 - root - INFO: - Epoch : 100/500 ===> Reconstruction loss = 2.0948===> Reconstruction loss = 2.4482 ===> Dual prediction loss = 0.0412  ===> Contrastive loss = -8.0818e+02 ===> Loss = -8.0773e+02
+2024-11-26 15:20:25 - root - INFO: - view_concat {'kmeans': {'AMI': 0.1766, 'NMI': 0.1838, 'ARI': 0.0657, 'accuracy': 0.223, 'precision': 0.2667, 'recall': 0.2103, 'f_measure': 0.2086}}
+2024-11-26 15:20:41 - root - INFO: - Epoch : 200/500 ===> Reconstruction loss = 1.8932===> Reconstruction loss = 2.2442 ===> Dual prediction loss = 0.0021  ===> Contrastive loss = -8.1064e+02 ===> Loss = -8.1023e+02
+2024-11-26 15:20:42 - root - INFO: - view_concat {'kmeans': {'AMI': 0.165, 'NMI': 0.1721, 'ARI': 0.07, 'accuracy': 0.2247, 'precision': 0.2716, 'recall': 0.2177, 'f_measure': 0.2203}}
+2024-11-26 15:20:57 - root - INFO: - Epoch : 300/500 ===> Reconstruction loss = 1.8053===> Reconstruction loss = 2.1733 ===> Dual prediction loss = 0.0015  ===> Contrastive loss = -8.1160e+02 ===> Loss = -8.1120e+02
+2024-11-26 15:20:58 - root - INFO: - view_concat {'kmeans': {'AMI': 0.1509, 'NMI': 0.1584, 'ARI': 0.0332, 'accuracy': 0.2058, 'precision': 0.2718, 'recall': 0.1981, 'f_measure': 0.2108}}
+2024-11-26 15:21:13 - root - INFO: - Epoch : 400/500 ===> Reconstruction loss = 1.7377===> Reconstruction loss = 2.1286 ===> Dual prediction loss = 0.0014  ===> Contrastive loss = -8.1210e+02 ===> Loss = -8.1171e+02
+2024-11-26 15:21:13 - root - INFO: - view_concat {'kmeans': {'AMI': 0.1748, 'NMI': 0.1819, 'ARI': 0.0698, 'accuracy': 0.2252, 'precision': 0.2712, 'recall': 0.2148, 'f_measure': 0.2205}}
+2024-11-26 15:21:27 - root - INFO: - Epoch : 500/500 ===> Reconstruction loss = 1.7014===> Reconstruction loss = 2.0836 ===> Dual prediction loss = 0.0012  ===> Contrastive loss = -8.1278e+02 ===> Loss = -8.1241e+02
+2024-11-26 15:21:28 - root - INFO: - view_concat {'kmeans': {'AMI': 0.1724, 'NMI': 0.1795, 'ARI': 0.0726, 'accuracy': 0.2169, 'precision': 0.2569, 'recall': 0.2075, 'f_measure': 0.2089}}
+2024-11-26 15:21:28 - root - INFO: - --------------------Training over--------------------
+2024-11-26 15:21:28 - root - INFO: - ACC:[0.2169]
+2024-11-26 15:21:28 - root - INFO: - NMI:[0.1795]
+2024-11-26 15:21:28 - root - INFO: - ARI:[0.0726]
+2024-11-26 15:21:28 - root - INFO: -  ACC 21.69 std 0.00 NMI 17.95 std 0.00 ARI 7.26 std 0.00
+
+
+````
