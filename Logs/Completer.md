@@ -381,3 +381,6 @@ root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer#
 2024-11-26 21:37:37 - root - INFO: - ARI:[0.1075]
 2024-11-26 21:37:37 - root - INFO: -  ACC 32.00 std 0.00 NMI 28.94 std 0.00 ARI 10.75 std 0.00
 ```
+
+
+### dataset scene_15 加了一个ParNetAttention 模块处理特征数据，Scene-15.mat 没有什么大的改变
