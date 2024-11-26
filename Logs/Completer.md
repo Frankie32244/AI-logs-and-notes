@@ -384,3 +384,27 @@ root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer#
 
 
 ### dataset scene_15 加了一个ParNetAttention 模块处理特征数据，Scene-15.mat 没有什么大的改变
+
+
+### dataset scene_15 加了一个PartialConv3 模块处理特征数据， missing rate = 0.5 和 missing rate = 0 效果都提升了5%左右
+
+miss rate = 0.5 test-time = 5
+```linux
+2024-11-26 22:13:46 - root - INFO: - --------------------Training over--------------------
+2024-11-26 22:13:46 - root - INFO: - ACC:[0.3924, 0.3864, 0.4013, 0.408, 0.4156]
+2024-11-26 22:13:46 - root - INFO: - NMI:[0.4847, 0.4638, 0.4759, 0.4935, 0.4949]
+2024-11-26 22:13:46 - root - INFO: - ARI:[0.299, 0.2743, 0.2852, 0.3028, 0.3043]
+2024-11-26 22:13:46 - root - INFO: -  ACC 40.07 std 1.05 NMI 48.26 std 1.16 ARI 29.31 std 1.16
+root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer# 
+```
+
+
+miss rate = 0 test-time = 5
+```linux
+2024-11-26 22:30:20 - root - INFO: - --------------------Training over--------------------
+2024-11-26 22:30:20 - root - INFO: - ACC:[0.3978, 0.4132, 0.4205, 0.4025, 0.4132]
+2024-11-26 22:30:20 - root - INFO: - NMI:[0.4935, 0.487, 0.4874, 0.4908, 0.4916]
+2024-11-26 22:30:20 - root - INFO: - ARI:[0.2989, 0.2901, 0.3043, 0.2879, 0.3057]
+2024-11-26 22:30:20 - root - INFO: -  ACC 40.94 std 0.82 NMI 49.01 std 0.25 ARI 29.74 std 0.72
+root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer# 
+```
