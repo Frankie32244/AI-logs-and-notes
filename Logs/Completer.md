@@ -371,3 +371,13 @@ root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer#
 2024-11-26 20:54:03 - root - INFO: -  ACC 12.15 std 0.00 NMI 6.08 std 0.00 ARI 1.12 std 0.00
 root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer# 
 ```
+
+
+### dataset scene_15 加了一个MuseAttention 模块处理特征数据，和文章的效果差30%的样子
+```linux
+2024-11-26 21:37:37 - root - INFO: - --------------------Training over--------------------
+2024-11-26 21:37:37 - root - INFO: - ACC:[0.32]
+2024-11-26 21:37:37 - root - INFO: - NMI:[0.2894]
+2024-11-26 21:37:37 - root - INFO: - ARI:[0.1075]
+2024-11-26 21:37:37 - root - INFO: -  ACC 32.00 std 0.00 NMI 28.94 std 0.00 ARI 10.75 std 0.00
+```
