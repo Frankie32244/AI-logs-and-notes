@@ -408,3 +408,14 @@ miss rate = 0 test-time = 5
 2024-11-26 22:30:20 - root - INFO: -  ACC 40.94 std 0.82 NMI 49.01 std 0.25 ARI 29.74 std 0.72
 root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer# 
 ```
+
+
+### dataset scene_15 加了一个S2Attention 模块处理特征数据， missing rate = 0 效果差20% 的样子
+```bash
+2024-11-26 23:19:04 - root - INFO: - --------------------Training over--------------------
+2024-11-26 23:19:04 - root - INFO: - ACC:[0.3739]
+2024-11-26 23:19:04 - root - INFO: - NMI:[0.3617]
+2024-11-26 23:19:04 - root - INFO: - ARI:[0.2151]
+2024-11-26 23:19:04 - root - INFO: -  ACC 37.39 std 0.00 NMI 36.17 std 0.00 ARI 21.51 std 0.00
+root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer# 
+```
