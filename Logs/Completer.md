@@ -288,3 +288,26 @@ root@autodl-container-534b4e910e-a60bb39b:~/2021-CVPR-Completer# python run.py -
 2024-11-24 16:01:36 - root - INFO: -  ACC 21.96 std 0.00 NMI 20.12 std 0.00 ARI 8.57 std 0.00
 root@autodl-container-879242bf41-4f27cd59:~/2021-CVPR-Completer# 
 ```
+
+
+###  dataset scene_15 加了一个efficientattention 模块处理特征数据，和文章的效果差很多。 
+
+```
+2024-11-26 12:07:34 - root - INFO: - Epoch : 100/500 ===> Reconstruction loss = 0.1404===> Reconstruction loss = 0.1228 ===> Dual prediction loss = 0.0340  ===> Contrastive loss = -8.0739e+02 ===> Loss = -8.0736e+02
+2024-11-26 12:07:35 - root - INFO: - view_concat {'kmeans': {'AMI': 0.2685, 'NMI': 0.2747, 'ARI': 0.1206, 'accuracy': 0.2751, 'precision': 0.3065, 'recall': 0.2731, 'f_measure': 0.2602}}
+2024-11-26 12:07:49 - root - INFO: - Epoch : 200/500 ===> Reconstruction loss = 0.0934===> Reconstruction loss = 0.0793 ===> Dual prediction loss = 0.0015  ===> Contrastive loss = -8.1010e+02 ===> Loss = -8.1008e+02
+2024-11-26 12:07:50 - root - INFO: - view_concat {'kmeans': {'AMI': 0.2583, 'NMI': 0.2646, 'ARI': 0.1062, 'accuracy': 0.2731, 'precision': 0.3124, 'recall': 0.2746, 'f_measure': 0.2612}}
+2024-11-26 12:08:04 - root - INFO: - Epoch : 300/500 ===> Reconstruction loss = 0.0843===> Reconstruction loss = 0.0772 ===> Dual prediction loss = 0.0013  ===> Contrastive loss = -8.1013e+02 ===> Loss = -8.1012e+02
+2024-11-26 12:08:05 - root - INFO: - view_concat {'kmeans': {'AMI': 0.2721, 'NMI': 0.2784, 'ARI': 0.1225, 'accuracy': 0.2852, 'precision': 0.3409, 'recall': 0.2855, 'f_measure': 0.2798}}
+2024-11-26 12:08:20 - root - INFO: - Epoch : 400/500 ===> Reconstruction loss = 0.0877===> Reconstruction loss = 0.0736 ===> Dual prediction loss = 0.0013  ===> Contrastive loss = -8.1123e+02 ===> Loss = -8.1122e+02
+2024-11-26 12:08:20 - root - INFO: - view_concat {'kmeans': {'AMI': 0.2486, 'NMI': 0.255, 'ARI': 0.0959, 'accuracy': 0.2638, 'precision': 0.3024, 'recall': 0.2617, 'f_measure': 0.2579}}
+2024-11-26 12:08:36 - root - INFO: - Epoch : 500/500 ===> Reconstruction loss = 0.0837===> Reconstruction loss = 0.0716 ===> Dual prediction loss = 0.0011  ===> Contrastive loss = -8.1174e+02 ===> Loss = -8.1172e+02
+2024-11-26 12:08:37 - root - INFO: - view_concat {'kmeans': {'AMI': 0.2616, 'NMI': 0.2679, 'ARI': 0.1019, 'accuracy': 0.2702, 'precision': 0.3122, 'recall': 0.265, 'f_measure': 0.2597}}
+2024-11-26 12:08:37 - root - INFO: - --------------------Training over--------------------
+2024-11-26 12:08:37 - root - INFO: - ACC:[0.2702]
+2024-11-26 12:08:37 - root - INFO: - NMI:[0.2679]
+2024-11-26 12:08:37 - root - INFO: - ARI:[0.1019]
+2024-11-26 12:08:37 - root - INFO: -  ACC 27.02 std 0.00 NMI 26.79 std 0.00 ARI 10.19 std 0.00
+root@autodl-container-0c4b4cae70-1b2227a1:~/2021-CVPR-Completer#
+
+```
