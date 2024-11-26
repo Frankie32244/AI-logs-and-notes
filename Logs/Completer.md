@@ -352,3 +352,12 @@ root@autodl-container-0c4b4cae70-1b2227a1:~/2021-CVPR-Completer#
 2024-11-26 19:34:00 - root - INFO: -  ACC 12.61 std 0.50 NMI 5.11 std 0.83 ARI 1.47 std 0.37
 root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer# 
 ```
+
+### dataset scene_15 加了一个LSKBlock 模块处理特征数据，和文章的效果几乎一样！！！
+```linux
+2024-11-26 20:41:12 - root - INFO: - --------------------Training over--------------------
+2024-11-26 20:41:12 - root - INFO: - ACC:[0.3246, 0.4085, 0.3808, 0.3614, 0.3728]
+2024-11-26 20:41:12 - root - INFO: - NMI:[0.3874, 0.4295, 0.4206, 0.3857, 0.4024]
+2024-11-26 20:41:12 - root - INFO: - ARI:[0.1909, 0.2416, 0.2364, 0.212, 0.2129]
+2024-11-26 20:41:12 - root - INFO: -  ACC 36.96 std 2.74 NMI 40.51 std 1.75 ARI 21.88 std 1.84
+```
