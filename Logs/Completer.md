@@ -211,7 +211,7 @@ root@autodl-container-b72911863c-065c7124:~/2021-CVPR-Completer#
 
 
 
-#### Noisy Minist   missing_rate = 0.5    test_time = 5
+### Noisy Minist   missing_rate = 0.5    test_time = 5
 ```linux
 root@autodl-container-7c5d4696fb-c54fea2a:~/2021-CVPR-Completer-main# python run.py --dataset 3 --devices 0 --print_num 100 --test_time 5
 2024-11-06 20:24:01 - root - INFO: - Dataset:NoisyMNIST
@@ -246,7 +246,7 @@ root@autodl-container-7c5d4696fb-c54fea2a:~/2021-CVPR-Completer-main#
 
 
 
-#### Noisy Minist   missing_rate = 0    test_time = 1
+### Noisy Minist   missing_rate = 0    test_time = 1
 ```linux
 root@autodl-container-534b4e910e-a60bb39b:~/2021-CVPR-Completer# python run.py --dataset 3 --test_time 1
 2024-11-15 10:42:36 - root - INFO: - Dataset:NoisyMNIST
