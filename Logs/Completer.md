@@ -481,3 +481,15 @@ root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer#
 2024-11-27 16:24:31 - root - INFO: - ARI:[0.2553, 0.2244, 0.2522, 0.2272, 0.2499]
 2024-11-27 16:24:31 - root - INFO: -  ACC 40.39 std 0.92 NMI 44.01 std 1.41 ARI 24.18 std 1.32
 ```
+
+
+### dataset scene_15 加了一个 TrippleAttention 模块处理特征数据 missing rate = 0  test-time = 5
+```linux
+2024-11-27 19:25:21 - root - INFO: - --------------------Training over--------------------
+2024-11-27 19:25:21 - root - INFO: - ACC:[0.3599, 0.3235, 0.3369, 0.3226, 0.3249]
+2024-11-27 19:25:21 - root - INFO: - NMI:[0.3927, 0.3754, 0.3813, 0.3475, 0.3559]
+2024-11-27 19:25:21 - root - INFO: - ARI:[0.2053, 0.1737, 0.1879, 0.1284, 0.1379]
+2024-11-27 19:25:21 - root - INFO: -  ACC 33.36 std 1.42 NMI 37.06 std 1.66 ARI 16.66 std 2.93
+```
+
+### dataset scene_15 加了一个 VisionPermutator 模块处理特征数据，报了很多错误，先不运行了
