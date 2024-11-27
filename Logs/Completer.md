@@ -471,3 +471,13 @@ root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer#
 2024-11-27 15:21:32 - root - INFO: - ARI:[0.1421]
 2024-11-27 15:21:32 - root - INFO: -  ACC 29.83 std 0.00 NMI 30.25 std 0.00 ARI 14.21 std 0.00
 ```
+
+
+### dataset scene_15 加了一个 SpatialGroupEnhance 模块处理特征数据， missing rate = 0 test-time = 5 效果比文章好那么一丢丢！
+```linux
+2024-11-27 16:24:31 - root - INFO: - --------------------Training over--------------------
+2024-11-27 16:24:31 - root - INFO: - ACC:[0.4114, 0.39, 0.41, 0.3958, 0.4123]
+2024-11-27 16:24:31 - root - INFO: - NMI:[0.4539, 0.4232, 0.445, 0.4235, 0.4547]
+2024-11-27 16:24:31 - root - INFO: - ARI:[0.2553, 0.2244, 0.2522, 0.2272, 0.2499]
+2024-11-27 16:24:31 - root - INFO: -  ACC 40.39 std 0.92 NMI 44.01 std 1.41 ARI 24.18 std 1.32
+```
