@@ -432,7 +432,7 @@ root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer#
 root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer# 
 ```
 
-### dataset scene_15 跑了一个随机赋值的Scene-15
+### dataset scene_15 跑了一个随机赋值的Scene-15,3个cell里面的所有数据都发生改变，由gpt随机赋值给它，赋值区间是0~1之间。
 ```bash
 2024-11-27 11:16:54 - root - INFO: - --------------------Training over--------------------
 2024-11-27 11:16:54 - root - INFO: - ACC:[0.0885]
@@ -440,4 +440,24 @@ root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer#
 2024-11-27 11:16:54 - root - INFO: - ARI:[-0.0001]
 2024-11-27 11:16:54 - root - INFO: -  ACC 8.85 std 0.00 NMI 0.86 std 0.00 ARI -0.01 std 0.00
 root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer# 
+```
+
+
+### dataset scene_15 跑了一个随机赋值的Scene-15,第一个cell里面的所有数据都发生改变，由gpt随机赋值给它，赋值区间是0~1之间。
+```bash
+2024-11-27 14:42:23 - root - INFO: - --------------------Training over--------------------
+2024-11-27 14:42:23 - root - INFO: - ACC:[0.2047]
+2024-11-27 14:42:23 - root - INFO: - NMI:[0.2063]
+2024-11-27 14:42:23 - root - INFO: - ARI:[0.1015]
+2024-11-27 14:42:23 - root - INFO: -  ACC 20.47 std 0.00 NMI 20.63 std 0.00 ARI 10.15 std 0.00
+```
+
+
+### dataset scene_15 跑了一个随机赋值的Scene-15,第一个的cell里面的所有数值是0到1之间，随机赋值，第二个cell里面所有的数值0到2之间
+```bash
+2024-11-27 14:48:33 - root - INFO: - --------------------Training over--------------------
+2024-11-27 14:48:33 - root - INFO: - ACC:[0.0894]
+2024-11-27 14:48:33 - root - INFO: - NMI:[0.0068]
+2024-11-27 14:48:33 - root - INFO: - ARI:[-0.0005]
+2024-11-27 14:48:33 - root - INFO: -  ACC 8.94 std 0.00 NMI 0.68 std 0.00 ARI -0.05 std 0.00
 ```
