@@ -431,3 +431,13 @@ root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer#
 2024-11-27 11:07:04 - root - INFO: -  ACC 40.00 std 1.86 NMI 42.85 std 2.08 ARI 23.16 std 3.13
 root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer# 
 ```
+
+### dataset scene_15 跑了一个随机赋值的Scene-15
+```bash
+2024-11-27 11:16:54 - root - INFO: - --------------------Training over--------------------
+2024-11-27 11:16:54 - root - INFO: - ACC:[0.0885]
+2024-11-27 11:16:54 - root - INFO: - NMI:[0.0086]
+2024-11-27 11:16:54 - root - INFO: - ARI:[-0.0001]
+2024-11-27 11:16:54 - root - INFO: -  ACC 8.85 std 0.00 NMI 0.86 std 0.00 ARI -0.01 std 0.00
+root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer# 
+```
