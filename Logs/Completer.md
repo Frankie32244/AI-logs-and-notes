@@ -461,3 +461,13 @@ root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer#
 2024-11-27 14:48:33 - root - INFO: - ARI:[-0.0005]
 2024-11-27 14:48:33 - root - INFO: -  ACC 8.94 std 0.00 NMI 0.68 std 0.00 ARI -0.05 std 0.00
 ```
+
+
+### dataset scene_15 加了一个 SKAttention 模块处理特征数据， missing rate = 0 test-time = 1 效果和文章差30%左右
+```bash
+2024-11-27 15:21:32 - root - INFO: - --------------------Training over--------------------
+2024-11-27 15:21:32 - root - INFO: - ACC:[0.2983]
+2024-11-27 15:21:32 - root - INFO: - NMI:[0.3025]
+2024-11-27 15:21:32 - root - INFO: - ARI:[0.1421]
+2024-11-27 15:21:32 - root - INFO: -  ACC 29.83 std 0.00 NMI 30.25 std 0.00 ARI 14.21 std 0.00
+```
