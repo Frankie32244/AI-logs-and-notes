@@ -408,7 +408,16 @@ root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer#
 root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer# 
 ```
 
+### dataset Caltech-101 20  加了一个ParNetAttention 模块处理特征数据，Scene-15.mat 没有什么大的改变
 
+
+```linux
+2024-11-27 23:23:17 - root - INFO: - --------------------Training over--------------------
+2024-11-27 23:23:17 - root - INFO: - ACC:[0.5947, 0.6199, 0.4489, 0.5696, 0.5771]
+2024-11-27 23:23:17 - root - INFO: - NMI:[0.6013, 0.5794, 0.6018, 0.631, 0.6008]
+2024-11-27 23:23:17 - root - INFO: - ARI:[0.6756, 0.6443, 0.5319, 0.6783, 0.6384]
+2024-11-27 23:23:17 - root - INFO: -  ACC 56.20 std 5.92 NMI 60.29 std 1.64 ARI 63.37 std 5.34
+```
 ### dataset scene_15 加了一个S2Attention 模块处理特征数据， missing rate = 0 效果差20% 的样子
 ```bash
 2024-11-26 23:19:04 - root - INFO: - --------------------Training over--------------------
