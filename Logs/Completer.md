@@ -408,7 +408,7 @@ root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer#
 root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer# 
 ```
 
-### dataset Caltech-101 20  加了一个ParNetAttention 模块处理特征数据，Scene-15.mat 没有什么大的改变
+### dataset Caltech-101 20  加了一个PartialConv3 模块处理特征数据，差10% 的样子
 
 
 ```linux
