@@ -387,8 +387,7 @@ root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer#
 
 
 ### dataset scene_15 加了一个PartialConv3 模块处理特征数据， missing rate = 0.5 和 missing rate = 0 效果都提升了5%左右
-
-miss rate = 0.5 test-time = 5
+1. miss rate = 0.5 test-time = 5
 ```linux
 2024-11-26 22:13:46 - root - INFO: - --------------------Training over--------------------
 2024-11-26 22:13:46 - root - INFO: - ACC:[0.3924, 0.3864, 0.4013, 0.408, 0.4156]
@@ -399,7 +398,7 @@ root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer#
 ```
 
 
-miss rate = 0 test-time = 5
+2.miss rate = 0 test-time = 5
 ```linux
 2024-11-26 22:30:20 - root - INFO: - --------------------Training over--------------------
 2024-11-26 22:30:20 - root - INFO: - ACC:[0.3978, 0.4132, 0.4205, 0.4025, 0.4132]
@@ -417,5 +416,18 @@ root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer#
 2024-11-26 23:19:04 - root - INFO: - NMI:[0.3617]
 2024-11-26 23:19:04 - root - INFO: - ARI:[0.2151]
 2024-11-26 23:19:04 - root - INFO: -  ACC 37.39 std 0.00 NMI 36.17 std 0.00 ARI 21.51 std 0.00
+root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer# 
+```
+
+### dataset scene_15 ScConv 缝不进去
+
+
+### dataset scene_15 加了一个 Simam模块处理特征数据， missing rate = 0 test-time = 5 效果和文章差不太多
+```bash
+2024-11-27 11:07:04 - root - INFO: - --------------------Training over--------------------
+2024-11-27 11:07:04 - root - INFO: - ACC:[0.367, 0.4078, 0.4045, 0.3971, 0.4234]
+2024-11-27 11:07:04 - root - INFO: - NMI:[0.3871, 0.4401, 0.4346, 0.4396, 0.4409]
+2024-11-27 11:07:04 - root - INFO: - ARI:[0.1701, 0.2434, 0.2412, 0.246, 0.2574]
+2024-11-27 11:07:04 - root - INFO: -  ACC 40.00 std 1.86 NMI 42.85 std 2.08 ARI 23.16 std 3.13
 root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer# 
 ```
