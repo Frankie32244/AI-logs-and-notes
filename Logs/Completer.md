@@ -209,7 +209,38 @@ root@autodl-container-b72911863c-065c7124:~/2021-CVPR-Completer#
 ```
 
 
-
+### dataset HandWritten  missing_rate = 0 test_time = 1 
+```linux
+oot@autodl-container-68e242be3a-5e2311a0:~/2021-CVPR-Completer# python run.py --dataset 4 --devices 0 --print_num 100 --test_time 1
+2024-11-27 20:53:49 - root - INFO: - Dataset:HandWritten_5
+2024-11-27 20:53:49 - root - INFO: - Prediction={
+2024-11-27 20:53:49 - root - INFO: -           arch1 = [128, 256, 128]
+2024-11-27 20:53:49 - root - INFO: -           arch2 = [128, 256, 128]
+2024-11-27 20:53:49 - root - INFO: - Autoencoder={
+2024-11-27 20:53:49 - root - INFO: -           arch1 = [240, 1024, 1024, 1024, 128]
+2024-11-27 20:53:49 - root - INFO: -           arch2 = [76, 1024, 1024, 1024, 128]
+2024-11-27 20:53:49 - root - INFO: -           activations1 = relu
+2024-11-27 20:53:49 - root - INFO: -           activations2 = relu
+2024-11-27 20:53:49 - root - INFO: -           batchnorm = True
+2024-11-27 20:53:49 - root - INFO: - training={
+2024-11-27 20:53:49 - root - INFO: -           missing_rate = 0
+2024-11-27 20:53:49 - root - INFO: -           seed = 10
+2024-11-27 20:53:49 - root - INFO: -           start_dual_prediction = 100
+2024-11-27 20:53:49 - root - INFO: -           batch_size = 256
+2024-11-27 20:53:49 - root - INFO: -           epoch = 500
+2024-11-27 20:53:49 - root - INFO: -           lr = 0.0001
+2024-11-27 20:53:49 - root - INFO: -           alpha = 9
+2024-11-27 20:53:49 - root - INFO: -           lambda1 = 0.1
+2024-11-27 20:53:49 - root - INFO: -           lambda2 = 0.1
+2024-11-27 20:53:49 - root - INFO: - print_num = 100
+2024-11-27 20:53:49 - root - INFO: - dataset = HandWritten_5
+2024-11-27 20:55:10 - root - INFO: - --------------------Training over--------------------
+2024-11-27 20:55:10 - root - INFO: - ACC:[0.803]
+2024-11-27 20:55:10 - root - INFO: - NMI:[0.7909]
+2024-11-27 20:55:10 - root - INFO: - ARI:[0.6308]
+2024-11-27 20:55:10 - root - INFO: -  ACC 80.30 std 0.00 NMI 79.09 std 0.00 ARI 63.08 std 0.00
+root@autodl-container-68e242be3a-5e2311a0:~/2021-CVPR-Completer# 
+```
 
 ### Noisy Minist   missing_rate = 0.5    test_time = 5
 ```linux
@@ -387,7 +418,7 @@ root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer#
 
 
 ### dataset scene_15 加了一个PartialConv3 模块处理特征数据， missing rate = 0.5 和 missing rate = 0 效果都提升了5%左右
-1. miss rate = 0.5 test-time = 5
+1. miss rate = 0.5 test-time = 5  seed = 8 
 ```linux
 2024-11-26 22:13:46 - root - INFO: - --------------------Training over--------------------
 2024-11-26 22:13:46 - root - INFO: - ACC:[0.3924, 0.3864, 0.4013, 0.408, 0.4156]
@@ -398,7 +429,7 @@ root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer#
 ```
 
 
-2.miss rate = 0 test-time = 5
+2.miss rate = 0   test-time = 5    seed = 8
 ```linux
 2024-11-26 22:30:20 - root - INFO: - --------------------Training over--------------------
 2024-11-26 22:30:20 - root - INFO: - ACC:[0.3978, 0.4132, 0.4205, 0.4025, 0.4132]
@@ -408,6 +439,24 @@ root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer#
 root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer# 
 ```
 
+跑的第二次，效果更好
+```linux
+2024-12-04 16:43:16 - root - INFO: - --------------------Training over--------------------
+2024-12-04 16:43:16 - root - INFO: - ACC:[0.4138, 0.4212, 0.3989, 0.4125, 0.4201]
+2024-12-04 16:43:16 - root - INFO: - NMI:[0.4827, 0.5151, 0.4939, 0.503, 0.4896]
+2024-12-04 16:43:16 - root - INFO: - ARI:[0.273, 0.3222, 0.308, 0.318, 0.3122]
+2024-12-04 16:43:16 - root - INFO: -  ACC 41.33 std 0.80 NMI 49.69 std 1.12 ARI 30.67 std 1.75
+root@autodl-container-7a694a84bd-e4c1c85b:~/2021-CVPR-Completer# 
+```
+
+3 miss rate = 0   test-time = 5    seed = 7
+```linux
+2024-12-04 16:24:50 - root - INFO: - --------------------Training over--------------------
+2024-12-04 16:24:50 - root - INFO: - ACC:[0.3862, 0.3938, 0.4105, 0.353, 0.4221]
+2024-12-04 16:24:50 - root - INFO: - NMI:[0.413, 0.4351, 0.4371, 0.4152, 0.443]
+2024-12-04 16:24:50 - root - INFO: - ARI:[0.2116, 0.2333, 0.2506, 0.2086, 0.2614]
+2024-12-04 16:24:50 - root - INFO: -  ACC 39.31 std 2.37 NMI 42.87 std 1.22 ARI 23.31 std 2.08
+```
 ### dataset Caltech-101 20  加了一个PartialConv3 模块处理特征数据，差10% 的样子
 
 
@@ -419,6 +468,38 @@ root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer#
 2024-11-27 23:23:17 - root - INFO: -  ACC 56.20 std 5.92 NMI 60.29 std 1.64 ARI 63.37 std 5.34
 ```
 
+随机种子改到了8,还是差10% 的样子 
+```linux
+root@autodl-container-7a694a84bd-e4c1c85b:~/2021-CVPR-Completer# python run.py --dataset 0 --devices 0 --print_num 100 --test_time 1
+2024-12-04 19:29:16 - root - INFO: - Dataset:Caltech101-20_pC3
+2024-12-04 19:29:16 - root - INFO: - Prediction={
+2024-12-04 19:29:16 - root - INFO: -           arch1 = [128, 256, 128]
+2024-12-04 19:29:16 - root - INFO: -           arch2 = [128, 256, 128]
+2024-12-04 19:29:16 - root - INFO: - Autoencoder={
+2024-12-04 19:29:16 - root - INFO: -           arch1 = [1984, 1024, 1024, 1024, 128]
+2024-12-04 19:29:16 - root - INFO: -           arch2 = [512, 1024, 1024, 1024, 128]
+2024-12-04 19:29:16 - root - INFO: -           activations1 = relu
+2024-12-04 19:29:16 - root - INFO: -           activations2 = relu
+2024-12-04 19:29:16 - root - INFO: -           batchnorm = True
+2024-12-04 19:29:16 - root - INFO: - training={
+2024-12-04 19:29:16 - root - INFO: -           seed = 8
+2024-12-04 19:29:16 - root - INFO: -           missing_rate = 0
+2024-12-04 19:29:16 - root - INFO: -           start_dual_prediction = 100
+2024-12-04 19:29:16 - root - INFO: -           batch_size = 256
+2024-12-04 19:29:16 - root - INFO: -           epoch = 500
+2024-12-04 19:29:16 - root - INFO: -           lr = 0.0001
+2024-12-04 19:29:16 - root - INFO: -           alpha = 9
+2024-12-04 19:29:16 - root - INFO: -           lambda1 = 0.1
+2024-12-04 19:29:16 - root - INFO: -           lambda2 = 0.1
+2024-12-04 19:29:16 - root - INFO: - print_num = 100
+2024-12-04 19:29:16 - root - INFO: - dataset = Caltech101-20_pC3
+2024-12-04 19:30:57 - root - INFO: - --------------------Training over--------------------
+2024-12-04 19:30:57 - root - INFO: - ACC:[0.5335]
+2024-12-04 19:30:57 - root - INFO: - NMI:[0.6368]
+2024-12-04 19:30:57 - root - INFO: - ARI:[0.6092]
+2024-12-04 19:30:57 - root - INFO: -  ACC 53.35 std 0.00 NMI 63.68 std 0.00 ARI 60.92 std 0.00
+
+```
 
 ### dataset LandUse-20  加了一个PartialConv3 模块处理特征数据，和文章几乎一样
 ```linux
@@ -428,6 +509,19 @@ root@autodl-container-824e4b9535-3ca58236:~/2021-CVPR-Completer#
 2024-12-01 15:46:20 - root - INFO: - ARI:[0.1385, 0.1383, 0.1422, 0.143, 0.0983]
 2024-12-01 15:46:20 - root - INFO: -  ACC 24.92 std 1.54 NMI 31.88 std 1.44 ARI 13.21 std 1.70
 ```
+
+### dataset Cub  加了一个PartialConv3 模块处理特征数据，和文章差一大半的效果
+
+```linux
+2024-12-04 16:55:22 - root - INFO: - --------------------Training over--------------------
+2024-12-04 16:55:22 - root - INFO: - ACC:[0.2417]
+2024-12-04 16:55:22 - root - INFO: - NMI:[0.345]
+2024-12-04 16:55:22 - root - INFO: - ARI:[0.0572]
+2024-12-04 16:55:22 - root - INFO: -  ACC 24.17 std 0.00 NMI 34.50 std 0.00 ARI 5.72 std 0.00
+root@autodl-container-7a694a84bd-e4c1c85b:~/2021-CVPR-Completer# 
+```
+
+
 
 
 ### dataset scene_15 加了一个S2Attention 模块处理特征数据， missing rate = 0 效果差20% 的样子
